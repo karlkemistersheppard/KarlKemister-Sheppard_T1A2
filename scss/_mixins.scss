@@ -1,0 +1,40 @@
+// @mixin page-content($padding,$font-size){
+//     padding: $padding;
+//     text-align: center;
+//     font-size:$font-size;
+//     color: green;
+// }
+
+@mixin navbar-min-960() {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+
+@mixin header-container(){
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+@mixin page-container(){
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin page-margins(){
+    margin-top: 64px;
+    margin-bottom: 64px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin blog-containter() {
+    display: flex;
+    align-content: center;
+}
