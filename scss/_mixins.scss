@@ -5,13 +5,19 @@
 //     color: green;
 // }
 
-@mixin navbar-min-960() {
+// navbar
+@mixin navbar-min-960(){
     display: flex;
     justify-content: space-evenly;
     
 }
 
 
+
+
+
+
+// header
 @mixin header-container(){
     display: flex;
     justify-content: space-between;
@@ -19,22 +25,36 @@
 
 
 
+
+
+
+
+// Main Containter
 @mixin page-container(){
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-content: center;
-    justify-content: center;
-    align-items: center;
 }
 
+
+
+// Child Container
+
+
+// Blog
+@mixin blog-container(){
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+
+
+
+// margins
 @mixin page-margins(){
     margin-top: 64px;
     margin-bottom: 64px;
     margin-left: auto;
     margin-right: auto;
-}
-
-@mixin blog-containter() {
-    display: flex;
-    align-content: center;
 }

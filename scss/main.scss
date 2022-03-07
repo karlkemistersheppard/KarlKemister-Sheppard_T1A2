@@ -17,6 +17,7 @@ header{
     }
         .logo {
                     width: 20%;
+                    font-size: 40px;
                 }
 
         ul li{
@@ -58,6 +59,7 @@ header{
 // body //
 
 body{
+    
     background-color: $primarycolour;
     color: white;
     
@@ -70,8 +72,8 @@ body{
 
 .page-container{
 
-    @include page-container;
-    @include page-margins;
+    @include page-container();
+    @include page-margins();
     width: 80%;
     height: 100%;
 
@@ -236,31 +238,34 @@ body{
 
 .blog-container{
 
-    @include blog-containter();
+    @include blog-container();
     background-color: #ff00ff;
     border-radius: 20px;
-    width: 100%;
-    padding: 5px;
+    width: 70%;
+    padding: 24px;
     margin: 10px 10px 10px 10px;
-   
+
     .blog-text{
+      display: inline-flex;
+      flex-direction: column;
+    }
+    .blog-heading{
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0;
+    }
+    .blog-button{
+        justify-content: flex-end;
+        width: 50px;
+        border-radius: 10%;
+        margin-left: auto;
         
     }
+}
 
-    .blog-img{
-        width: 20%;
-        height:20%;
-        padding: 10%;
-    }
-
-
-
-    .blog-button{
-
-    }
-
-
-
-
-
+h1, h2, h3, h4, h5, h6 {
+    
+}
+h1 {
+    
 }
