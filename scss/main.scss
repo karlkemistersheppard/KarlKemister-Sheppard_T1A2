@@ -1,30 +1,77 @@
 @import "variables";
 @import "mixins";
 
+
+MAIN INTRO
+
+
+            .wrap{
+                width:100%;
+                
+            }
+            .gradient-text{
+                display:flex;
+                justify-content: center;
+                text-align:center;
+                font-family:$fontstyle;
+                background: linear-gradient(to right, #66fcf1,#ff0490,#8f00f1,#39ff14);
+                background-size: 200% 200%;
+                animation: neon 2s ease-in-out infinite;
+                background-clip: text;
+                -webkit-background-clip:text;
+                color:rgba(0,0,0,1);
+                font-size:200px;
+                width:100%;
+                margin:20vh auto;
+                display:flex;
+                justify-content: center;
+                text-align:center;
+                transition: color .4s ease-in-out;
+                font-weight:900;
+                text-shadow: 5px 5px 20px #66fcf22c;
+            }
+            .gradient-text:hover{
+                color:rgba(0,0,0,0);
+            }
+            @keyframes neon { 
+                0%{background-position:left}
+                15%{background-position:right}
+                25%{background-position:left}
+                50%{background-position:right}
+                75%{background-position:left}
+                100%{background-position:right}
+            }
+            
+
+          
 // header
 
 header{
     @include header-container;
     height: 64px;
-    background-color: aqua;
 
     .nav-bar {
-        width: 40%;
-        height: 100vh;
-        background-color: #ff00ff;
+        width: 100%;
+        height: auto;
         z-index: 1;
         opacity: 50%;
     }
         .logo {
-                    width: 20%;
-                    font-size: 40px;
-                }
+            width: 20%;
+            font-size: 40px;
+        }
+        ul{
+            padding-left: 0;
+        }
 
         ul li{
             list-style-type: none;
             font-size: 16px;
             font-family: $fontstyle;
             font-weight: normal;
+            text-align: center;
+            
+            
         }
 
             a {
@@ -34,10 +81,15 @@ header{
                 color: $textcolour;
                 &:hover{
                     color: $hovercolour;
+                    box-shadow: 4px 4px 24px #ff00ff;
+                    font-size: 120%;
+                    margin:5%;
+                    text-transform: uppercase;
+                    
                 }    
             }
 
-                
+                      
 }
 
 
@@ -62,9 +114,16 @@ body{
     
     background-color: $primarycolour;
     color: white;
+    margin:0;
     
     h2{
         font-family: $fontstyle;
+    }
+
+    .logo {
+        width: 20%;
+        font-size: 40px;
+        text-align: center;
     }
     
 }
@@ -76,12 +135,14 @@ body{
     @include page-margins();
     width: 80%;
     height: 100%;
+    
 
     
     .main-heading {
         font-size: 24px;
         width: auto;
         text-align: center;
+        
     }
 
     .main-text{
@@ -89,6 +150,8 @@ body{
         text-align: center;
         margin-left: 30px;
         margin-right: 30px;
+        width: 60%;
+        
     }
 
 }
@@ -102,8 +165,8 @@ body{
 .par-text{
     font-size: 18px;
     text-align: center;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
 
 
 }
@@ -119,14 +182,12 @@ body{
 
 // About me picture
 .hello-pic {
-    height:auto;
-    width: 50%;
+    height: auto;
+    max-width: 60%;
     padding: 0;
-    border-radius: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
-    justify-content: center;
-    box-shadow: 2px 2px 5px #ff00ff;
+    margin-top: 30px;
+
+    
 }
 
 .profile-pic {
@@ -146,7 +207,7 @@ body{
 
 #footer-bar {
             height: auto;
-            width: 90%;
+            width: 100%;
             background-color: $bannercolour;
             box-shadow: 10px 10px white;
             // padding: 6px;
@@ -167,12 +228,20 @@ body{
                     width: 40px;
                     color: black;
                     margin: 8px;
+                    
+                    &:hover{
+                        transform: scale(140%);
+                        
+                    }
+                    
+
+
                 }
                
             }
     
         // Changes the icon size when the device width is less than 300px
-        @media only screen and (max-device-width: 300px) {
+        @media only screen and (max-device-width: 375px) {
             .social {
                 height: auto;
                 margin: 8px;
@@ -180,10 +249,11 @@ body{
                 transition: 2s;
         }
 
-        @media only screen and (max-device-width: 300px) {
+        @media only screen and (max-device-width: 375px) {
             #footer-bar {
                 background-color: yellow;
                 height: auto;
+                width: 95%;
             }
         }
     }
@@ -239,11 +309,16 @@ body{
 .blog-container{
 
     @include blog-container();
-    background-color: #ff00ff;
     border-radius: 20px;
+    border-color: $bannercolour;
+    border: 2px solid $bannercolour;
     width: 70%;
     padding: 24px;
-    margin: 10px 10px 10px 10px;
+    margin: 2%;
+    &:hover{
+        color: $hovercolour;
+        box-shadow: 4px 4px 24px #ff00ff;
+    }
 
     .blog-text{
       display: inline-flex;
@@ -256,11 +331,20 @@ body{
     }
     .blog-button{
         justify-content: flex-end;
-        width: 50px;
+        width: auto;
         border-radius: 10%;
         margin-left: auto;
+        padding: 8px 16px 8px 16px;
+        background-color: $bannercolour;
+        &:hover{
+            background-color: black;
+            color: white;
+            box-shadow: 4px 4px 24px #ff00ff;
+            border: 2px solid $bannercolour;
+        }
         
     }
+
 }
 
 h1, h2, h3, h4, h5, h6 {

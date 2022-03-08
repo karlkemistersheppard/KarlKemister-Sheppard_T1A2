@@ -1,18 +1,98 @@
+MAIN INTRO
+.wrap {
+  width: 100%;
+}
+
+.gradient-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  background: -webkit-gradient(linear, left top, right top, from(#66fcf1), color-stop(#ff0490), color-stop(#8f00f1), to(#39ff14));
+  background: linear-gradient(to right, #66fcf1, #ff0490, #8f00f1, #39ff14);
+  background-size: 200% 200%;
+  -webkit-animation: neon 2s ease-in-out infinite;
+          animation: neon 2s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: black;
+  font-size: 200px;
+  width: 100%;
+  margin: 20vh auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  -webkit-transition: color .4s ease-in-out;
+  transition: color .4s ease-in-out;
+  font-weight: 900;
+  text-shadow: 5px 5px 20px #66fcf22c;
+}
+
+.gradient-text:hover {
+  color: rgba(0, 0, 0, 0);
+}
+
+@-webkit-keyframes neon {
+  0% {
+    background-position: left;
+  }
+  15% {
+    background-position: right;
+  }
+  25% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  75% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@keyframes neon {
+  0% {
+    background-position: left;
+  }
+  15% {
+    background-position: right;
+  }
+  25% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  75% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 64px;
-  background-color: aqua;
 }
 
 header .nav-bar {
-  width: 40%;
-  height: 100vh;
-  background-color: #ff00ff;
+  width: 100%;
+  height: auto;
   z-index: 1;
   opacity: 50%;
 }
@@ -22,11 +102,16 @@ header .logo {
   font-size: 40px;
 }
 
+header ul {
+  padding-left: 0;
+}
+
 header ul li {
   list-style-type: none;
   font-size: 16px;
   font-family: "Roboto Mono", monospace;
   font-weight: normal;
+  text-align: center;
 }
 
 header a {
@@ -38,6 +123,11 @@ header a {
 
 header a:hover {
   color: #66fcf1;
+  -webkit-box-shadow: 4px 4px 24px #ff00ff;
+          box-shadow: 4px 4px 24px #ff00ff;
+  font-size: 120%;
+  margin: 5%;
+  text-transform: uppercase;
 }
 
 @media only screen and (min-device-width: 960px) {
@@ -60,10 +150,17 @@ header a:hover {
 body {
   background-color: #0b0c10;
   color: white;
+  margin: 0;
 }
 
 body h2 {
   font-family: "Roboto Mono", monospace;
+}
+
+body .logo {
+  width: 20%;
+  font-size: 40px;
+  text-align: center;
 }
 
 .page-container {
@@ -76,6 +173,9 @@ body h2 {
           flex-direction: column;
   -ms-flex-line-pack: center;
       align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 64px;
   margin-bottom: 64px;
   margin-left: auto;
@@ -95,6 +195,7 @@ body h2 {
   text-align: center;
   margin-left: 30px;
   margin-right: 30px;
+  width: 60%;
 }
 
 .sub-heading {
@@ -107,8 +208,8 @@ body h2 {
 .par-text {
   font-size: 18px;
   text-align: center;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .interests {
@@ -118,16 +219,9 @@ body h2 {
 
 .hello-pic {
   height: auto;
-  width: 50%;
+  max-width: 60%;
   padding: 0;
-  border-radius: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-shadow: 2px 2px 5px #ff00ff;
-          box-shadow: 2px 2px 5px #ff00ff;
+  margin-top: 30px;
 }
 
 .profile-pic {
@@ -139,7 +233,7 @@ body h2 {
 
 #footer-bar {
   height: auto;
-  width: 90%;
+  width: 100%;
   background-color: #66fcf1;
   -webkit-box-shadow: 10px 10px white;
           box-shadow: 10px 10px white;
@@ -168,7 +262,12 @@ body h2 {
   margin: 8px;
 }
 
-@media only screen and (max-device-width: 300px) {
+#footer-bar .social:hover {
+  -webkit-transform: scale(140%);
+          transform: scale(140%);
+}
+
+@media only screen and (max-device-width: 375px) {
   .social {
     height: auto;
     margin: 8px;
@@ -179,10 +278,11 @@ body h2 {
   }
 }
 
-@media only screen and (max-device-width: 300px) and (max-device-width: 300px) {
+@media only screen and (max-device-width: 375px) and (max-device-width: 375px) {
   #footer-bar {
     background-color: yellow;
     height: auto;
+    width: 95%;
   }
 }
 
@@ -248,11 +348,18 @@ input[type=submit]:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #ff00ff;
   border-radius: 20px;
+  border-color: #66fcf1;
+  border: 2px solid #66fcf1;
   width: 70%;
   padding: 24px;
-  margin: 10px 10px 10px 10px;
+  margin: 2%;
+}
+
+.blog-container:hover {
+  color: #66fcf1;
+  -webkit-box-shadow: 4px 4px 24px #ff00ff;
+          box-shadow: 4px 4px 24px #ff00ff;
 }
 
 .blog-container .blog-text {
@@ -275,8 +382,18 @@ input[type=submit]:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  width: 50px;
+  width: auto;
   border-radius: 10%;
   margin-left: auto;
+  padding: 8px 16px 8px 16px;
+  background-color: #66fcf1;
+}
+
+.blog-container .blog-button:hover {
+  background-color: black;
+  color: white;
+  -webkit-box-shadow: 4px 4px 24px #ff00ff;
+          box-shadow: 4px 4px 24px #ff00ff;
+  border: 2px solid #66fcf1;
 }
 /*# sourceMappingURL=main.css.map */
