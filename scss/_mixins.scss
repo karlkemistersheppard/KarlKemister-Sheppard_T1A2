@@ -19,11 +19,6 @@
     
 }
 
-
-
-
-
-
 // header
 @mixin header-container(){
     display: flex;
@@ -31,13 +26,8 @@
     flex-wrap: wrap;
     
     
+    
 }
-
-
-
-
-
-
 
 // Main Containter
 @mixin page-container(){
@@ -48,8 +38,6 @@
 
 }
 
-
-
 // Child Container
 
 
@@ -58,6 +46,7 @@
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
+    width: 60%;
 }
 
 
