@@ -1,3 +1,16 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #0b0c10;
+  color: white;
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  margin-bottom: 64px;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,6 +30,7 @@ header .nav-bar {
   z-index: 1;
   position: fixed;
   background-color: #0b0c10;
+  top: 0;
 }
 
 header ul {
@@ -26,14 +40,14 @@ header ul {
 
 header ul li {
   list-style-type: none;
-  font-size: 3vw;
+  font-size: 1rem;
   font-family: "Roboto Mono", monospace;
   font-weight: normal;
   text-align: center;
 }
 
 header ul li h1.gradient-text {
-  font-size: 4vw;
+  font-size: 1rem;
 }
 
 header a {
@@ -51,12 +65,12 @@ header a:hover {
   transition: 0.2s;
 }
 
-@media only screen and (max-device-width: 375px) {
-  header .nav-bar {
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+  header header .nav-bar {
     height: auto;
     width: 100%;
   }
-  .nav-bar ul {
+  header .nav-bar ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -68,16 +82,37 @@ header a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
-    font-size: 25px;
+    font-size: 10rem;
   }
 }
 
-@media only screen and (min-device-width: 960px) {
-  header .nav-bar {
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  header header .nav-bar {
     height: auto;
     width: 100%;
   }
-  .nav-bar ul {
+  header .nav-bar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    font-size: 20rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  header header .nav-bar {
+    height: auto;
+    width: 100%;
+  }
+  header .nav-bar ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -88,7 +123,27 @@ header a:hover {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
-    font-size: 25px;
+    font-size: 30rem;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  header header .nav-bar {
+    height: auto;
+    width: 100%;
+  }
+  header .nav-bar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    font-size: 40rem;
   }
 }
 
@@ -173,15 +228,7 @@ header a:hover {
   }
 }
 
-body {
-  background-color: #0b0c10;
-  color: white;
-  margin: 0;
-  font-family: "Roboto Mono", monospace;
-  margin-bottom: 64px;
-}
-
-body div.logo {
+div.logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,23 +243,23 @@ body div.logo {
   background-color: #0b0c10;
 }
 
-body div.logo a:link {
+div.logo a:link {
   text-decoration: none;
 }
 
-body div.logo a:visited {
+div.logo a:visited {
   text-decoration: none;
 }
 
-body div.logo a:hover {
+div.logo a:hover {
   text-decoration: none;
 }
 
-body div.logo a:active {
+div.logo a:active {
   text-decoration: none;
 }
 
-body div.logo .gradient-text {
+div.logo .gradient-text {
   background: -webkit-gradient(linear, left top, right top, from(#66fcf1), color-stop(#ff0490), color-stop(#8f00f1), to(#39ff14));
   background: linear-gradient(to right, #66fcf1, #ff0490, #8f00f1, #39ff14);
   background-size: 300% 300%;
@@ -227,17 +274,17 @@ body div.logo .gradient-text {
   margin: 0px 0px 0px 0px;
 }
 
-body div.logo .gradient-text .reverse-letter {
+div.logo .gradient-text .reverse-letter {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   color: #66fcf1;
 }
 
-body div.logo h1.gradient-text {
+div.logo h1.gradient-text {
   font-family: "Roboto Mono", monospace;
 }
 
-body div.logo .gradient-text:hover {
+div.logo .gradient-text:hover {
   color: rgba(0, 0, 0, 0);
 }
 

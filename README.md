@@ -3,3 +3,5 @@ https://www.youtube.com/watch?v=Yg6POD0M30w creating form and adding honeypot + 
 https://codepen.io/bsander/pen/pPpbNm adding rainbow effect to text with underlining gradient-
 
 https://blog.hubspot.com/website/remove-underline-from-links-css- remove underline on link- for the logo to return to main index.html
+
+https://devfacts.com/media-queries-breakpoints-2021/- MEDIA Queries breakpoints

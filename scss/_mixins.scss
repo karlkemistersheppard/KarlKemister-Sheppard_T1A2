@@ -1,35 +1,42 @@
-// @mixin page-content($padding,$font-size){
-//     padding: $padding;
-//     text-align: center;
-//     font-size:$font-size;
-//     color: green;
-// }
 
-// navbar
-@mixin navbar-min-960(){
+// HEADER MIXINS (FLEX PROPERTIES)-------------------
+
+@mixin header-container(){
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    
+    justify-content: center;
+    flex-wrap: wrap;
 }
-@mixin navbar-min-375(){
+
+@mixin navbar-min-320-575(){
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
     
 }
 
-// header
-@mixin header-container(){
+@mixin navbar-min-576-768(){
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-    
+    justify-content: flex-end;
+    flex-direction: column;
     
 }
 
-// Main Containter
+@mixin navbar-min-769-992(){
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+@mixin navbar-min-993-1200(){
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+// PAGE CONTAINER (FLEX PROPERTIES)-------------------
+
 @mixin page-container(){
     display: flex;
     flex-direction: column;
@@ -38,10 +45,6 @@
 
 }
 
-// Child Container
-
-
-// Blog
 @mixin blog-container(){
     display: flex;
     justify-content: flex-end;
@@ -52,7 +55,34 @@
 
 
 
-// margins
+
+// CONTACT FORM (FLEX PROPERTIES)-------------------
+
+
+
+
+
+
+
+
+// FOOTER (FLEX PROPERTIES)-------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MARGINS (FLEX PROPERTIES)-------------------
+
 @mixin page-margins(){
     margin-top: 64px;
     margin-bottom: 100px;

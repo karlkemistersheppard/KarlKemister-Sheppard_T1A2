@@ -1,16 +1,27 @@
 @import "variables";
 @import "mixins";
 
+html{
+    font-size: 100%;
+}
+
+body{
+
+    background-color: $primarycolour;
+    color: white;
+    margin:0;
+    font-family:$fontstyle;
+    font-size: 16px;
+    margin-bottom: 64px;
+}
+    
+
 // HEADER---------------------------------------------------------------------
 
 header{
     @include header-container;
     height: auto;
     background-color: $primarycolour;
-    
-    
-    
-    
 
     .nav-bar {
         width: 100%;
@@ -18,11 +29,7 @@ header{
         z-index: 1;
         position: fixed;
         background-color: $primarycolour;
-        
-        
-        
-        
-        
+        top: 0;       
     }
         ul{
             padding-left: 0;
@@ -32,13 +39,13 @@ header{
 
         ul li{
             list-style-type: none;
-            font-size: 3vw;
+            font-size: 1rem;
             font-family: $fontstyle;
             font-weight: normal;
             text-align: center;
             
             h1.gradient-text{
-                font-size: 4vw;
+                font-size: 1rem;
             }
             
         }
@@ -56,39 +63,64 @@ header{
                 }    
             }
 
+            // Tiny devices, less than 575px
+            @media only screen and (min-width: 320px) and (max-width: 575px) { 
+
+                header .nav-bar {
+                    height: auto;
+                    width: 100%;
+                }
+               .nav-bar ul {
+                    @include navbar-min-320-575();
+                    width: 100%;
+                    font-size: 10rem;       
+                }
+            }
+            // Small devices (landscape phones, less than 768px)
+            @media only screen and (min-width: 576px) and (max-width: 768px) { 
+
+                header .nav-bar {
+                    height: auto;
+                    width: 100%;
+                }
+            .nav-bar ul {
+                    @include navbar-min-576-768();
+                    width: 100%;
+                    font-size: 20rem;       
+                }
+            }
+
+            // Medium devices (tablets, less than 992px)
+            @media only screen and (min-width: 769px) and (max-width: 992px) { 
+
+                header .nav-bar {
+                    height: auto;
+                    width: 100%;
+                }
+            .nav-bar ul {
+                    @include navbar-min-769-992();
+                    width: 100%;
+                    font-size: 30rem;       
+                }
+            }
+
+            // Large devices (desktops, less than 1200px)
+            @media only screen and (min-width: 993px) and (max-width: 1200px) { 
+
+                header .nav-bar {
+                    height: auto;
+                    width: 100%;
+                }
+            .nav-bar ul {
+                    @include navbar-min-993-1200();
+                    width: 100%;
+                    font-size: 40rem;       
+                }
+            }
+            
                       
 }
 
-@media only screen and (max-device-width: 375px){
-
-    header .nav-bar {
-        height: auto;
-        width: 100%;
-
-    }
-   .nav-bar ul {
-        @include navbar-min-375;
-        width: 100%;
-        font-size: 25px;
-    }
-    
-    
-}
-@media only screen and (min-device-width: 960px){
-
-    header .nav-bar {
-        height: auto;
-        width: 100%;
-
-    }
-   .nav-bar ul {
-        @include navbar-min-960;
-        width: 100%;
-        font-size: 25px;
-        
-    }
-    
-}
 
 // MAIN INTRO---------------------------------------------------------------------
 
@@ -160,13 +192,9 @@ header{
 
 // BODY---------------------------------------------------------------------
 
-body{
+
     
-    background-color: $primarycolour;
-    color: white;
-    margin:0;
-    font-family:$fontstyle;
-    margin-bottom: 64px;
+    
     
 
     
@@ -223,7 +251,7 @@ body{
                  100%{background-position:right}
          }
     }
-}
+
 
 // PAGE CONTAINERS---------------------------------------------------------------------
 
@@ -491,4 +519,6 @@ body{
     }
 
 }
+
+
 
