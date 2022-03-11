@@ -1,76 +1,46 @@
 @import "variables";
 @import "mixins";
 
-
-MAIN INTRO
-
-
-            .wrap{
-                width:100%;
-                
-            }
-            .gradient-text{
-                display:flex;
-                justify-content: center;
-                text-align:center;
-                font-family:$fontstyle;
-                background: linear-gradient(to right, #66fcf1,#ff0490,#8f00f1,#39ff14);
-                background-size: 200% 200%;
-                animation: neon 2s ease-in-out infinite;
-                background-clip: text;
-                -webkit-background-clip:text;
-                color:rgba(0,0,0,1);
-                font-size:200px;
-                width:100%;
-                margin:20vh auto;
-                display:flex;
-                justify-content: center;
-                text-align:center;
-                transition: color .4s ease-in-out;
-                font-weight:900;
-                text-shadow: 5px 5px 20px #66fcf22c;
-            }
-            .gradient-text:hover{
-                color:rgba(0,0,0,0);
-            }
-            @keyframes neon { 
-                0%{background-position:left}
-                15%{background-position:right}
-                25%{background-position:left}
-                50%{background-position:right}
-                75%{background-position:left}
-                100%{background-position:right}
-            }
-            
-
-          
-// header
+// HEADER---------------------------------------------------------------------
 
 header{
     @include header-container;
-    height: 64px;
+    // height: 64px;
+    height: auto;
+    background-color: $primarycolour;
+    
+    
+    
 
     .nav-bar {
         width: 100%;
         height: auto;
         z-index: 1;
-        opacity: 50%;
+        position: fixed;
+        background-color: $primarycolour;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+        
+        
+        
     }
-        .logo {
-            width: 20%;
-            font-size: 40px;
-        }
         ul{
             padding-left: 0;
+            margin: 0;
+            
         }
 
         ul li{
             list-style-type: none;
-            font-size: 16px;
+            font-size: 2.5vw;
             font-family: $fontstyle;
             font-weight: normal;
             text-align: center;
             
+            h1.gradient-text{
+                font-size: 3vw;
+            }
             
         }
 
@@ -81,18 +51,28 @@ header{
                 color: $textcolour;
                 &:hover{
                     color: $hovercolour;
-                    box-shadow: 4px 4px 24px #ff00ff;
-                    font-size: 120%;
-                    margin:5%;
-                    text-transform: uppercase;
-                    
+                    background-color: $primarycolour;
                 }    
             }
 
                       
 }
 
+@media only screen and (max-device-width: 375px){
 
+    header .nav-bar {
+        height: auto;
+        width: 100%;
+
+    }
+   .nav-bar ul {
+        @include navbar-min-375;
+        width: 100%;
+        font-size: 25px;
+    }
+    
+    
+}
 @media only screen and (min-device-width: 960px){
 
     header .nav-bar {
@@ -108,93 +88,198 @@ header{
     }
     
 }
-// body //
+
+// MAIN INTRO---------------------------------------------------------------------
+
+
+.wrap{
+    height: 100%;
+    width: auto;           
+                
+}
+    .gradient-text{
+        display:flex;
+        justify-content: center;
+        text-align:center;
+        font-family:$fontstyle;
+        background: linear-gradient(to right, #66fcf1,#ff0490,#8f00f1,#39ff14);
+        background-size: 300% 300%;
+        animation: neon 2s ease-in-out infinite;
+        background-clip: text;
+        -webkit-background-clip:text;
+        color:rgba(0,0,0,1);
+        font-size: 40vw; //This allows the font to take up a % of the VW so when the device width changes the font size increases with the chnage.
+        transition: color .4s ease-in-out;
+        text-shadow: 2px 2px 10px #66fcf22c;
+        margin:0px 0px 0px 0px;
+        
+    
+    .reverse-letter{
+        transform: rotateY(180deg); //reverse single letter inside logo
+        color: #66fcf1;
+        }
+    }                
+                
+    .gradient-text:hover{
+                    color:rgba(0, 0, 0, 0);
+                }
+                
+    // @media only screen and (min-device-width: 200px) and (max-device-width: 375px) {
+    //     .gradient-text{
+    //         font-size: 50vw;
+    //         align-items: center;
+            
+    //     }
+    // }
+    // @media only screen and (min-device-width: 375px) and (max-device-width: 960px) {
+    //     .gradient-text{
+    //         font-size: 50vw;
+    //         align-items: center;
+            
+    //     }
+    // }
+    // @media only screen and (min-device-width: 960px) and (max-device-width: 1440px) {
+    //     .gradient-text{
+    //         font-size: 50vw auto;
+    //         align-items: center;
+            
+    //     }
+    // }
+    @keyframes neon { 
+        0%{background-position:left}
+        15%{background-position:right}
+        25%{background-position:left}
+        50%{background-position:right}
+        75%{background-position:left}
+        100%{background-position:right}
+    }                
+            
+
+          
+
+// BODY---------------------------------------------------------------------
 
 body{
     
     background-color: $primarycolour;
     color: white;
     margin:0;
-    
-    h2{
-        font-family: $fontstyle;
-    }
+    font-family:$fontstyle;
 
-    .logo {
-        width: 20%;
-        font-size: 40px;
-        text-align: center;
-    }
     
+    
+ // LOGO TOP LEFT --------------------------------------------------------------------- 
+
+ div.logo{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    width: 100%;
+    height: auto;
+    a:link { text-decoration: none; }
+    a:visited { text-decoration: none; }
+    a:hover { text-decoration: none; }
+    a:active { text-decoration: none; }
+    position: fixed;
+    z-index: 1;
+    background-color: $primarycolour;
+        
+        .gradient-text{
+                 background: linear-gradient(to right, #66fcf1,#ff0490,#8f00f1,#39ff14);
+                 background-size: 300% 300%;
+                 background-clip: text;
+                 -webkit-background-clip:text;
+                 color:rgba(0,0,0,1);
+                 font-size:3vw;
+                 font-family:$fontstyle;
+                 transition: color .4s ease-in-out;
+                 text-shadow: 2px 2px 5px #66fcf242;
+                 margin:0px 0px 0px 0px;
+                 
+                 
+                 
+
+        .reverse-letter{
+                transform: rotateY(180deg); //reverse single letter inside logo
+                color: #66fcf1;
+                 }
+        }
+        h1.gradient-text{
+            font-family: $fontstyle;
+        }
+        .gradient-text:hover{
+                 color:rgba(0,0,0,0);
+             }
+             
+        @keyframes neon { 
+                 0%{background-position:left}
+                 15%{background-position:right}
+                 25%{background-position:left}
+                 50%{background-position:right}
+                 75%{background-position:left}
+                 100%{background-position:right}
+         }
+    }
 }
-// Home page
+
+// PAGE CONTAINERS---------------------------------------------------------------------
 
 .page-container{
 
     @include page-container();
     @include page-margins();
     width: 80%;
-    height: 100%;
+    height: auto;
+    padding-top: 64px;
     
 
     
     .main-heading {
-        font-size: 24px;
+        font-size: 5vw;
         width: auto;
         text-align: center;
         
     }
 
     .main-text{
-        font-size: 18px;
+        font-size: 3vw;
         text-align: center;
         margin-left: 30px;
         margin-right: 30px;
         width: 60%;
-        
     }
 
+
+
+    .sub-heading {
+        font-size: 30px;
+        width: auto;
+        text-align: center;
+        text-shadow: 2px 2px 5px #ff00ff;
+    }
+    .par-text{
+        font-size: 18px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    @media screen {
+        
+    }
+    @media only screen and (max-device-width: 375px) {
+        h1 {
+            text-align: center;
+        }
+    }
 }
-.sub-heading {
-    font-size: 30px;
-    width: auto;
-    text-align: center;
-    text-shadow: 2px 2px 5px #ff00ff;
-}
 
-.par-text{
-    font-size: 18px;
-    text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
-
-
-}
-.interests{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-
-
-
-// img //
+// IMAGES---------------------------------------------------------------------
 
 // About me picture
 .hello-pic {
     height: auto;
     max-width: 60%;
     padding: 0;
-    margin-top: 30px;
-
-    
-}
-
-.profile-pic {
-    border-radius: 50%;
-    height:auto;
-    width: 60%;
-    padding: 0;
 }
 
 
@@ -202,98 +287,123 @@ body{
 
 
 
-// footer //    
-        
+
+// FOOTER ---------------------------------------------------------------------  
 
 #footer-bar {
             height: auto;
+            position: fixed;
+            left: 0;
+            bottom: 0;
             width: 100%;
             background-color: $bannercolour;
-            box-shadow: 10px 10px white;
-            // padding: 6px;
             display: flex;
             justify-content: center;
-            clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
         ul {
             list-style-type: none;
         }
             li {
                 float: left;
-            }
-                
+            }               
                 .social {
                     height: auto;
                     width: 40px;
                     color: black;
-                    margin: 8px;
-                    
+                    margin: 8px;         
                     &:hover{
                         transform: scale(140%);
-                        
                     }
-                    
-
-
-                }
-               
+                }              
             }
     
-        // Changes the icon size when the device width is less than 300px
+        // Changes the icon size when the device width is less than 375px
         @media only screen and (max-device-width: 375px) {
             .social {
                 height: auto;
                 margin: 8px;
-                transform: scale(70%);
+                transform: scale(80%);
                 transition: 2s;
         }
 
         @media only screen and (max-device-width: 375px) {
             #footer-bar {
-                background-color: yellow;
+                background-color: $bannercolour;
                 height: auto;
-                width: 95%;
+                width:100%;
             }
         }
+        // @media only screen and (max-device-width: 375px) {
+        //     .nav-bar {
+        //         transform: scale(80%);
+        //         transition: 2s;
+        //     }
+        // }
     }
 
 
-// Contact Form  
 
+
+//ADDITIONAL ITEMS EXTERNAL TO THE MAIN BODY HTML    
+// CONTACT FORM --------------------------------------------------------------------- 
 
     /* Style inputs with type="text", select elements and textareas */
     input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-family: $fontstyle;
+    
   }
   
   /* Style the submit button with a specific background color etc */
   input[type=submit] {
-    background-color: #fff;
-    color: black;
+    color: $textcolour;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    border-radius: 20px;
+    border-color: $bannercolour;
+    border: 2px solid $bannercolour;
+    background-color: $primarycolour;
+    
   }
-  
+  // change the form background color and border effects
+  input[type="text"], textarea {
+    border-radius: 20px;
+    border-color: $bannercolour;
+    border: 2px solid $bannercolour;
+    background-color: $primarycolour;
+    color:white;
+    &:hover{
+        color: $hovercolour;
+        box-shadow: 4px 4px 24px #ff00ff;
+        transform: scale(110%);
+    }
+  }
+
   /* When moving the mouse over the submit button, add a darker green color */
   input[type=submit]:hover {
     background-color: $bannercolour;
   }
-  
+  //This is to remove the inner blue boarder that appears within the text-field area when selected.
+  input:focus {
+    outline: none;
+}
   /* Add a background color and some padding around the form */
   .contact-form {
     border-radius: 5px;
     background-color: $primarycolour;
     display: inline-flex;
+    width: 70%;
+    margin-bottom: 24px;
   }
 
   @media only screen and (max-device-width: 375px) {
@@ -304,7 +414,7 @@ body{
   }
 
 
-//   Blog
+//   BLOG---------------------------------------------------------------------
 
 .blog-container{
 
@@ -318,6 +428,7 @@ body{
     &:hover{
         color: $hovercolour;
         box-shadow: 4px 4px 24px #ff00ff;
+        transform: scale(110%);
     }
 
     .blog-text{
@@ -345,11 +456,19 @@ body{
         
     }
 
+    //Using container to extend to tool-img on experience pages
+    .tool-img-container{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        padding: 5px 5px 5px 5px;
+
+        .tool-img{
+            width: 5vw;
+            
+        }
+
+    }
+
 }
 
-h1, h2, h3, h4, h5, h6 {
-    
-}
-h1 {
-    
-}
