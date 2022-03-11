@@ -353,7 +353,7 @@ div.logo .gradient-text:hover {
 }
 
 .page-container .main-heading {
-  font-size: 5vw;
+  font-size: 2rem;
   width: auto;
   text-align: center;
 }
@@ -511,13 +511,6 @@ input:focus {
 
 label {
   font-size: 4vw;
-}
-
-@media only screen and (max-device-width: 375px) {
-  .page-container {
-    margin-bottom: 24px;
-    margin-top: 24px;
-  }
 }
 
 .blog-container {

@@ -2,7 +2,7 @@
 @import "mixins";
 
 html{
-    font-size: 16px;
+    font-size: 16px; //setting the standard font size for the site- so i can use rem for display ranges.
 }
 
 body{
@@ -261,10 +261,11 @@ header{
     
     
     
+    
 
     
     .main-heading {
-        font-size: 5vw;
+        font-size: 2rem;
         width: auto;
         text-align: center;
         
@@ -443,12 +444,7 @@ header{
       font-size: 4vw;
   }
 
-  @media only screen and (max-device-width: 375px) {
-    .page-container {
-        margin-bottom: 24px;
-        margin-top: 24px;
-    }
-  }
+  
 
 
 //   BLOG---------------------------------------------------------------------
