@@ -76,8 +76,7 @@ header a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding: 2px;
   }
   header .nav-bar ul li {
     width: 100%;
@@ -195,6 +194,7 @@ header a:hover {
   transition: color .4s ease-in-out;
   text-shadow: 2px 2px 10px #66fcf22c;
   margin: 0px 0px 0px 0px;
+  -webkit-text-stroke: 0.5px #66fcf1;
 }
 
 .gradient-text .reverse-letter {
@@ -345,17 +345,17 @@ div.logo .gradient-text:hover {
           align-items: center;
   margin-top: 64px;
   margin-bottom: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
+  width: 100%;
   height: auto;
   padding-top: 64px;
 }
 
 .page-container .main-heading {
-  font-size: 2rem;
+  font-size: 1.8rem;
   width: auto;
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .page-container .main-text {
@@ -364,28 +364,30 @@ div.logo .gradient-text:hover {
 }
 
 .page-container .sub-heading {
-  font-size: 4vw;
+  font-size: 1.2rem;
   width: auto;
-  text-align: center;
+  text-align: left;
   text-shadow: 2px 2px 5px #ff00ff;
 }
 
 .page-container .par-text {
-  font-size: 2vw;
-  text-align: center;
-  margin-left: 10px;
-  margin-right: 10px;
+  font-size: 1rem;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  line-height: 140%;
 }
 
-@media only screen and (max-device-width: 375px) {
-  .page-container h1 {
-    text-align: center;
-  }
+.page-container ul {
+  font-size: 1rem;
+}
+
+.page-container .resume-icon {
+  width: 3rem;
 }
 
 .hello-pic {
   height: auto;
-  max-width: 60%;
+  max-width: 80%;
   padding: 0;
 }
 
@@ -417,14 +419,14 @@ div.logo .gradient-text:hover {
 
 #footer-bar .social {
   height: auto;
-  width: 20px;
+  width: 30px;
   color: black;
   margin: 8px;
 }
 
 #footer-bar .social:hover {
-  -webkit-transform: scale(140%);
-          transform: scale(140%);
+  -webkit-transform: scale(120%);
+          transform: scale(120%);
 }
 
 @media only screen and (max-device-width: 375px) {
@@ -433,8 +435,6 @@ div.logo .gradient-text:hover {
     margin: 8px;
     -webkit-transform: scale(80%);
             transform: scale(80%);
-    -webkit-transition: 2s;
-    transition: 2s;
   }
 }
 
@@ -524,20 +524,20 @@ label {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 60%;
+  width: 70%;
   border-radius: 20px;
   border-color: #66fcf1;
-  border: 2px solid #66fcf1;
+  border: 1px solid #66fcf1;
   padding: 24px;
-  margin: 2%;
+  margin: 5%;
 }
 
 .blog-container:hover {
   color: #66fcf1;
   -webkit-box-shadow: 4px 4px 24px #ff00ff;
           box-shadow: 4px 4px 24px #ff00ff;
-  -webkit-transform: scale(110%);
-          transform: scale(110%);
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
 }
 
 .blog-container .blog-text {
@@ -551,17 +551,21 @@ label {
 }
 
 .blog-container .blog-heading {
-  font-size: 5vw;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
 }
 
 .blog-container time {
-  font-size: 3vw;
+  font-size: 0.8rem;
 }
 
 .blog-container p {
-  font-size: 2.5vw;
+  font-size: 1rem;
+}
+
+.blog-container a {
+  text-align: right;
 }
 
 .blog-container .blog-button {
@@ -573,7 +577,7 @@ label {
   margin-left: auto;
   padding: 4px 8px 4px 8px;
   background-color: #66fcf1;
-  font-size: 3vw;
+  font-size: 0.7rem;
 }
 
 .blog-container .blog-button:hover {
@@ -588,15 +592,15 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 5px 5px 5px 5px;
 }
 
 .blog-container .tool-img-container .tool-img {
-  width: 5vw;
+  width: 2.5rem;
 }
 /*# sourceMappingURL=main.css.map */

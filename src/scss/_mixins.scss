@@ -12,6 +12,7 @@
     justify-content: flex-end;
     flex-direction: column;
     
+    
 }
 
 @mixin navbar-min-576-768(){
@@ -49,7 +50,7 @@
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-    width: 60%;
+    width: 70%;
 }
 
 
@@ -86,6 +87,5 @@
 @mixin page-margins(){
     margin-top: 64px;
     margin-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    
 }

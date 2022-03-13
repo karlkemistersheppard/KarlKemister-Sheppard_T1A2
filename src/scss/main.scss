@@ -68,8 +68,7 @@ header{
                 }
                 .nav-bar ul{
                     @include navbar-min-320-575();
-                    margin-top: 20px;
-                    margin-bottom: 20px;
+                    padding:2px;
                 }
                .nav-bar ul li{
                     width: 100%;
@@ -170,6 +169,7 @@ header{
         transition: color .4s ease-in-out;
         text-shadow: 2px 2px 10px #66fcf22c;
         margin:0px 0px 0px 0px;
+        -webkit-text-stroke: 0.5px $bannercolour;
         
     
     .reverse-letter{
@@ -225,6 +225,7 @@ header{
                  
                  
                  
+                 
 
         .reverse-letter{
                 transform: rotateY(180deg); //reverse single letter inside logo
@@ -233,6 +234,7 @@ header{
         }
         h1.gradient-text{
             font-family: $fontstyle;
+            
         }
         .gradient-text:hover{
                  color:rgba(0,0,0,0);
@@ -255,7 +257,7 @@ header{
 
     @include page-container();
     @include page-margins();
-    width: 80%;
+    width: 100%;
     height: auto;
     padding-top: 64px;
     
@@ -265,11 +267,35 @@ header{
 
     
     .main-heading {
-        font-size: 2rem;
+        font-size: 1.8rem;
         width: auto;
         text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
         
         
+        // Tiny devices, less than 575px
+        @media only screen and (min-width: 320px) and (max-width: 575px) { 
+
+           
+        }
+        // Small devices (landscape phones, less than 768px)
+        @media only screen and (min-width: 576px) and (max-width: 768px) { 
+
+       
+        }
+
+        // Medium devices (tablets, less than 992px)
+        @media only screen and (min-width: 769px) and (max-width: 992px) { 
+
+
+        }
+
+        // Large devices (desktops, less than 1200px)
+        @media only screen and (min-width: 993px) and (max-width: 1900px) { 
+
+           
+        }
     }
 
     .main-text{
@@ -277,40 +303,114 @@ header{
         // margin-left: 20px;
         // margin-right: 20px;
         width: 80%;
+
+        // Tiny devices, less than 575px
+        @media only screen and (min-width: 320px) and (max-width: 575px) { 
+
+           
+        }
+        // Small devices (landscape phones, less than 768px)
+        @media only screen and (min-width: 576px) and (max-width: 768px) { 
+
+       
+        }
+
+        // Medium devices (tablets, less than 992px)
+        @media only screen and (min-width: 769px) and (max-width: 992px) { 
+
+
+        }
+
+        // Large devices (desktops, less than 1200px)
+        @media only screen and (min-width: 993px) and (max-width: 1900px) { 
+
+           
+        }
     }
 
 
 
     .sub-heading {
-        font-size: 4vw;
+        font-size: 1.2rem;
         width: auto;
-        text-align: center;
+        text-align: left;
         text-shadow: 2px 2px 5px #ff00ff;
+        
+
+        // Tiny devices, less than 575px
+        @media only screen and (min-width: 320px) and (max-width: 575px) { 
+            
+        
+           
+        }
+        // Small devices (landscape phones, less than 768px)
+        @media only screen and (min-width: 576px) and (max-width: 768px) { 
+
+       
+        }
+
+        // Medium devices (tablets, less than 992px)
+        @media only screen and (min-width: 769px) and (max-width: 992px) { 
+
+
+        }
+
+        // Large devices (desktops, less than 1200px)
+        @media only screen and (min-width: 993px) and (max-width: 1900px) { 
+
+           
+        }
     }
     .par-text{
-        font-size: 2vw;
-        text-align: center;
-        margin-left: 10px;
-        margin-right: 10px;
+        font-size: 1rem;
+        text-align: left;
+        font-family: $fontstyle-para;
+        line-height: 140%;
+        
+
+        // Tiny devices, less than 575px
+        @media only screen and (min-width: 320px) and (max-width: 575px) { 
+
+           
+        }
+        // Small devices (landscape phones, less than 768px)
+        @media only screen and (min-width: 576px) and (max-width: 768px) { 
+
+       
+        }
+
+        // Medium devices (tablets, less than 992px)
+        @media only screen and (min-width: 769px) and (max-width: 992px) { 
+
+
+        }
+
+        // Large devices (desktops, less than 1200px)
+        @media only screen and (min-width: 993px) and (max-width: 1900px) { 
+
+           
+        }
 
     
     }
-    @media screen {
-        
+    
+    ul{
+        font-size: 1rem;
     }
-    @media only screen and (max-device-width: 375px) {
-        h1 {
-            text-align: center;
-        }
-    }
+    .resume-icon{
+        width: 3rem;
+    }    
 }
+    
+
+
 
 // IMAGES---------------------------------------------------------------------
 
 // About me picture
 .hello-pic {
     height: auto;
-    max-width: 60%;
+    max-width: 80%;
     padding: 0;
 }
 
@@ -344,11 +444,11 @@ header{
             }               
                 .social {
                     height: auto;
-                    width: 20px;
+                    width: 30px;
                     color: black;
                     margin: 8px;         
                     &:hover{
-                        transform: scale(140%);
+                        transform: scale(120%);
                     }
                 }              
             }
@@ -359,7 +459,6 @@ header{
                 height: auto;
                 margin: 8px;
                 transform: scale(80%);
-                transition: 2s;
         }
 
         @media only screen and (max-device-width: 375px) {
@@ -454,30 +553,35 @@ header{
     @include blog-container();
     border-radius: 20px;
     border-color: $bannercolour;
-    border: 2px solid $bannercolour;
+    border: 1px solid $bannercolour;
     padding: 24px;
-    margin: 2%;
+    margin: 5%;
     &:hover{
         color: $hovercolour;
         box-shadow: 4px 4px 24px #ff00ff;
-        transform: scale(110%);
+        transform: scale(105%);
     }
 
     .blog-text{
       display: inline-flex;
       flex-direction: column;
+      
     }
     .blog-heading{
-        font-size: 5vw;
+        font-size: 1.5rem;
         font-weight: bold;
         margin: 0;
     }
     time{
-        font-size: 3vw;
+        font-size: 0.8rem;
     }
     p{
-        font-size: 2.5vw;
+        font-size: 1rem;
     }
+    a{
+        text-align: right;
+    }
+    
     .blog-button{
         justify-content: flex-end;
         width: auto;
@@ -485,7 +589,7 @@ header{
         margin-left: auto;
         padding: 4px 8px 4px 8px;
         background-color: $bannercolour;
-        font-size: 3vw;
+        font-size: 0.7rem;
         &:hover{
             background-color: black;
             color: white;
@@ -498,13 +602,13 @@ header{
     //Using container to extend to tool-img on experience pages
     .tool-img-container{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         flex-wrap: wrap;
         padding: 5px 5px 5px 5px;
         
 
         .tool-img{
-            width: 5vw;
+            width: 2.5rem;
             
         }
 
