@@ -268,11 +268,6 @@ header{
     height: auto;
     padding-top: 64px;
     
-    
-    
-    
-
-    
     .main-heading {
         font-size: 1.8rem;
         width: auto;
@@ -406,6 +401,23 @@ header{
     }
     .resume-icon{
         width: 3rem;
+    }
+    .code-logo{
+        background-color: white;
+        border-radius: 20%;
+        width: 8rem;
+        &:hover{
+            transform: scale(105%);
+        }
+    }
+    .codecademy-logo{
+        background-color: white;
+        border-radius: 20px;
+        width: 12rem;
+        &:hover{
+            transform: scale(105%);
+            
+        }
     }    
 }
     
@@ -420,11 +432,6 @@ header{
     max-width: 80%;
     padding: 0;
 }
-
-
-
-
-
 
 
 // FOOTER ---------------------------------------------------------------------  
@@ -475,12 +482,6 @@ header{
                 width:100%;
             }
         }
-        // @media only screen and (max-device-width: 375px) {
-        //     .nav-bar {
-        //         transform: scale(80%);
-        //         transition: 2s;
-        //     }
-        // }
     }
 
 
@@ -498,7 +499,7 @@ header{
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 16px;
-    font-size: 3vw;
+    font-size: 0.8rem;
     font-family: $fontstyle;
     
   }
@@ -512,7 +513,7 @@ header{
     cursor: pointer;
     border-radius: 20px;
     border-color: $bannercolour;
-    border: 2px solid $bannercolour;
+    border: 1px solid $bannercolour;
     background-color: $primarycolour;
     
   }
@@ -520,7 +521,7 @@ header{
   input[type="text"], textarea {
     border-radius: 20px;
     border-color: $bannercolour;
-    border: 2px solid $bannercolour;
+    border: 1px solid $bannercolour;
     background-color: $primarycolour;
     color:white;
     &:hover{
@@ -547,7 +548,7 @@ header{
     margin-bottom: 24px;
   }
   label{
-      font-size: 4vw;
+      font-size: 0.8rem;
   }
 
   
@@ -564,9 +565,8 @@ header{
     padding: 24px;
     margin: 5%;
     &:hover{
-        color: $hovercolour;
-        box-shadow: 4px 4px 24px #ff00ff;
-        transform: scale(105%);
+        box-shadow: 2px 2px 16px #ff00ff;
+        transform: scale(102%);
     }
 
     .blog-text{
@@ -600,8 +600,8 @@ header{
         &:hover{
             background-color: black;
             color: white;
-            box-shadow: 4px 4px 24px #ff00ff;
-            border: 2px solid $bannercolour;
+            box-shadow: 2px 2px 16px #ff00ff;
+            border: 1px solid $bannercolour;
         }
         
     }

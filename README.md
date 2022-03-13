@@ -66,3 +66,5 @@ Tech stack used to create this website is HTML, CSS, SCSS (SASSY), Pathshells, G
 - Remove underline text decoration on link for the logo. [ONLINE] Available at: https://blog.hubspot.com/website/remove-underline-from-links-css [Accessed 9th March 2022].
 
 - Media queries and suggested breakpoints for all devices [ONLINE] Available at: https://devfacts.com/media-queries-breakpoints-2021 [Accessed 8th March 2022].
+
+- Coder Academy, Website Reference (Subjects and Term Breakdown) [ONLINE] Available at: https://www.coderacademy.edu.au/web-development-bootcamp?hsLang=en-au [Accessed 13th March 2022].
