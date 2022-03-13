@@ -41,7 +41,7 @@ In addition each blog container class has additional button inside each that wil
 
 
 ### <u>**Sitemap**</u>
-![Sitemap](./img/Sitemap.png)
+![Sitemap](/src/img/Sitemap.png)
 
 ### <u>**Screenshots**</u>
 ![Mobile First 320px home](./)
