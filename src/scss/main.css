@@ -167,6 +167,17 @@ header a:hover {
   }
 }
 
+@media (orientation: landscape) {
+  header nav.nav-bar ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
 .wrap {
   height: 100%;
   width: auto;
