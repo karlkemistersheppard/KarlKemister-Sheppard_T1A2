@@ -2,7 +2,7 @@
 @import "mixins";
 
 html{
-    font-size: 16px; //setting the standard font size for the site- so i can use rem for display ranges.
+    font-size: 16px;
 }
 
 body{
@@ -18,9 +18,17 @@ body{
 // HEADER---------------------------------------------------------------------
 
 header{
-    @include header-container;
+    // @include header-container;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     height: auto;
     background-color: $primarycolour;
+
+    header .nav-bar {
+        height: auto;
+        width: 100%;
+    }
 
     .nav-bar {
         width: 100%;
@@ -34,6 +42,15 @@ header{
             padding-left: 0;
             margin: 0;
             
+        }
+        .nav-bar ul{
+            @include navbar-min-320-575();
+            padding:2px;
+        }
+
+        .nav-bar ul li{
+            width: 100%;
+            font-size: 1rem;       
         }
 
         ul li{
@@ -58,97 +75,9 @@ header{
                     transition: 0.2s;
                 }    
             }
-
-
-            // Tiny devices, less than 575px
-            @media only screen and (min-width: 320px) and (max-width: 575px) { 
-
-                header .nav-bar {
-                    height: auto;
-                    width: 100%;
-                }
-                .nav-bar ul{
-                    @include navbar-min-320-575();
-                    padding:2px;
-                }
-               .nav-bar ul li{
-                    width: 100%;
-                    font-size: 1rem;       
-                }
                 .gradient-text{
                     font-size: 1rem;
                 }
-            }
-            // Small devices (landscape phones, less than 768px)
-            @media only screen and (min-width: 576px) and (max-width: 768px) { 
-
-                header .nav-bar {
-                    height: auto;
-                    width: 100%;
-                }
-                .nav-bar ul{
-                    @include navbar-min-576-768();
-                }
-                .nav-bar ul li{
-                    width: 100%;
-                    font-size: 1.25rem;       
-                }
-                .gradient-text{
-                    font-size: 1.5rem;
-                }
-            }
-
-            // Medium devices (tablets, less than 992px)
-            @media only screen and (min-width: 769px) and (max-width: 992px) { 
-
-
-                header .nav-bar {
-                    height: auto;
-                    width: 100%;
-                }
-
-                .nav-bar ul{
-                    @include navbar-min-769-992();
-                    margin-top: 20px;
-                    margin-bottom: 20px;
-                }
-                .nav-bar ul li{
-                    width: 100%;
-                    font-size: 1.5rem;       
-                }
-                .gradient-text{
-                    font-size: 1.5rem;
-                }
-            }
-
-            // Large devices (desktops, less than 1200px)
-            @media only screen and (min-width: 993px) and (max-width: 1900px) { 
-
-                header .nav-bar {
-                    height: auto;
-                    width: 100%;
-                }
-
-                .nav-bar ul{
-                    @include navbar-min-993-1200();
-                    margin-top: 20px;
-                    margin-bottom: 20px;
-                }
-                .nav-bar ul li{
-                    width: 100%;
-                    font-size: 1.5rem;      
-                }
-                .gradient-text{
-                    font-size: 1.5rem;
-                }
-            }
-            @media screen and (min-width: 320px) and (max-width: 1900px) and (orientation: landscape) {
-                nav.nav-bar ul{
-                    flex-direction: row;
-                    margin-top: 10px;
-                    margin-bottom: 10px;
-                }
-            }
                       
 }
 
@@ -172,7 +101,7 @@ header{
         background-clip: text;
         -webkit-background-clip:text;
         color:rgba(0,0,0,1);
-        font-size: 10rem; //This allows the font to take up a % of the VW so when the device width changes the font size increases with the chnage.
+        font-size: 10rem;
         transition: color .4s ease-in-out;
         text-shadow: 2px 2px 10px #66fcf22c;
         margin:0px 0px 0px 0px;
@@ -180,7 +109,7 @@ header{
         
     
     .reverse-letter{
-        transform: rotateY(180deg); //reverse single letter inside logo
+        transform: rotateY(180deg);
         color: #66fcf1;
         }
     }                
@@ -202,7 +131,7 @@ header{
 
     
     
- // LOGO TOP LEFT --------------------------------------------------------------------- 
+ // LOGO TOP --------------------------------------------------------------------- 
 
  div.logo{
     display: flex;
@@ -235,7 +164,7 @@ header{
                  
 
         .reverse-letter{
-                transform: rotateY(180deg); //reverse single letter inside logo
+                transform: rotateY(180deg);
                 color: #66fcf1;
                  }
         }
@@ -275,59 +204,11 @@ header{
         padding-left: 10px;
         padding-right: 10px;
         
-        
-        // Tiny devices, less than 575px
-        @media only screen and (min-width: 320px) and (max-width: 575px) { 
-
-           
-        }
-        // Small devices (landscape phones, less than 768px)
-        @media only screen and (min-width: 576px) and (max-width: 768px) { 
-
-       
-        }
-
-        // Medium devices (tablets, less than 992px)
-        @media only screen and (min-width: 769px) and (max-width: 992px) { 
-
-
-        }
-
-        // Large devices (desktops, less than 1200px)
-        @media only screen and (min-width: 993px) and (max-width: 1900px) { 
-
-           
-        }
     }
 
     .main-text{
         text-align: center;
-        // margin-left: 20px;
-        // margin-right: 20px;
         width: 80%;
-
-        // Tiny devices, less than 575px
-        @media only screen and (min-width: 320px) and (max-width: 575px) { 
-
-           
-        }
-        // Small devices (landscape phones, less than 768px)
-        @media only screen and (min-width: 576px) and (max-width: 768px) { 
-
-       
-        }
-
-        // Medium devices (tablets, less than 992px)
-        @media only screen and (min-width: 769px) and (max-width: 992px) { 
-
-
-        }
-
-        // Large devices (desktops, less than 1200px)
-        @media only screen and (min-width: 993px) and (max-width: 1900px) { 
-
-           
-        }
     }
 
 
@@ -337,63 +218,12 @@ header{
         width: auto;
         text-align: left;
         text-shadow: 2px 2px 5px #ff00ff;
-        
-
-        // Tiny devices, less than 575px
-        @media only screen and (min-width: 320px) and (max-width: 575px) { 
-            
-        
-           
-        }
-        // Small devices (landscape phones, less than 768px)
-        @media only screen and (min-width: 576px) and (max-width: 768px) { 
-
-       
-        }
-
-        // Medium devices (tablets, less than 992px)
-        @media only screen and (min-width: 769px) and (max-width: 992px) { 
-
-
-        }
-
-        // Large devices (desktops, less than 1200px)
-        @media only screen and (min-width: 993px) and (max-width: 1900px) { 
-
-           
-        }
     }
     .par-text{
         font-size: 1rem;
         text-align: left;
         font-family: $fontstyle-para;
-        line-height: 140%;
-        
-
-        // Tiny devices, less than 575px
-        @media only screen and (min-width: 320px) and (max-width: 575px) { 
-
-           
-        }
-        // Small devices (landscape phones, less than 768px)
-        @media only screen and (min-width: 576px) and (max-width: 768px) { 
-
-       
-        }
-
-        // Medium devices (tablets, less than 992px)
-        @media only screen and (min-width: 769px) and (max-width: 992px) { 
-
-
-        }
-
-        // Large devices (desktops, less than 1200px)
-        @media only screen and (min-width: 993px) and (max-width: 1900px) { 
-
-           
-        }
-
-    
+        line-height: 140%;    
     }
     
     ul{
@@ -431,203 +261,436 @@ header{
     img.blog-img1{
         height:auto;
         width: 100%;
-    }    
-}
-    
-
-
-
-// IMAGES---------------------------------------------------------------------
-
-// About me picture
-.hello-pic {
-    height: auto;
-    max-width: 80%;
-    padding: 0;
-}
-
-
-// FOOTER ---------------------------------------------------------------------  
-
-#footer-bar {
-            height: auto;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: $bannercolour;
-            display: flex;
-            justify-content: center;
-            
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-            li {
-                float: left;
-            }               
-                .social {
-                    height: auto;
-                    width: 30px;
-                    color: black;
-                    margin: 8px;         
-                    &:hover{
-                        transform: scale(120%);
-                    }
-                }              
-            }
-    
-        // Changes the icon size when the device width is less than 375px
-        @media only screen and (max-device-width: 375px) {
-            .social {
-                height: auto;
-                margin: 8px;
-                transform: scale(80%);
-        }
-
-        @media only screen and (max-device-width: 375px) {
-            #footer-bar {
-                background-color: $bannercolour;
-                height: auto;
-                width:100%;
-            }
-        }
+    }
+    .hello-pic {
+        height: auto;
+        max-width: 80%;
+        padding: 0;
     }
 
-
-
-
-//ADDITIONAL ITEMS EXTERNAL TO THE MAIN BODY HTML    
-// CONTACT FORM --------------------------------------------------------------------- 
-
-    /* Style inputs with type="text", select elements and textareas */
     input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    font-size: 0.8rem;
-    font-family: $fontstyle;
-    
-  }
-  
-  /* Style the submit button with a specific background color etc */
-  input[type=submit] {
-    justify-content: flex-end;
-    width: 60px;
-    height: 30px;
-    border-radius: 10%;
-    margin-left: auto;
-    padding: 4px 8px 4px 8px;
-    background-color: $bannercolour;
-    font-size: 0.7rem;
-        &:hover{
-            background-color: black;
-            color: white;
-            box-shadow: 2px 2px 16px #ff00ff;
-            border: 1px solid $bannercolour;
-        }
-    
-  }
-  // change the form background color and border effects
-  input[type="text"], textarea {
-    border-radius: 20px;
-    border-color: $bannercolour;
-    border: 1px solid $bannercolour;
-    background-color: $primarycolour;
-    color:white;
-    
-    &:hover{
-        color: $hovercolour;
-        box-shadow: 4px 4px 24px #ff00ff;
-        transform: scale(110%);
-    }
-  }
-  
-  //This is to remove the inner blue boarder that appears within the text-field area when selected.
-  input:focus {
-    outline: none;
-}
-  /* Add a background color and some padding around the form */
-  .contact-form {
-    border-radius: 5px;
-    background-color: $primarycolour;
-    display: inline-flex;
-    width: 70%;
-    margin-bottom: 24px;
-  }
-  label{
-      font-size: 0.8rem;
-  }
-
-  
-
-
-//   BLOG---------------------------------------------------------------------
-
-.blog-container{
-
-    @include blog-container();
-    border-radius: 20px;
-    border-color: $bannercolour;
-    border: 1px solid $bannercolour;
-    padding: 24px;
-    margin: 5%;
-    &:hover{
-        box-shadow: 2px 2px 16px #ff00ff;
-        transform: scale(102%);
-    }
-
-    .blog-text{
-      display: inline-flex;
-      flex-direction: column;
-      
-    }
-    .blog-heading{
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin: 0;
-    }
-    time{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
         font-size: 0.8rem;
-    }
-    p{
-        font-size: 1rem;
-    }
-    a{
-        text-align: right;
-    }
-    p.blog-ul-main{
-        font-size: 0.4rem;
-    }
-    p.blog-li{
-        font-size: 0.7rem;
-    }
-    
-    .blog-button{
+        font-family: $fontstyle;
+        
+      }
+      
+      input[type=submit] {
         justify-content: flex-end;
-        width: auto;
+        width: 60px;
+        height: 30px;
         border-radius: 10%;
         margin-left: auto;
         padding: 4px 8px 4px 8px;
         background-color: $bannercolour;
         font-size: 0.7rem;
+            &:hover{
+                background-color: black;
+                color: white;
+                box-shadow: 2px 2px 16px #ff00ff;
+                border: 1px solid $bannercolour;
+            }
+        
+      }
+     
+      input[type="text"], textarea {
+        border-radius: 20px;
+        border-color: $bannercolour;
+        border: 1px solid $bannercolour;
+        background-color: $primarycolour;
+        color:white;
+        
         &:hover{
-            background-color: black;
-            color: white;
-            box-shadow: 2px 2px 16px #ff00ff;
-            border: 1px solid $bannercolour;
+            color: $hovercolour;
+            box-shadow: 4px 4px 24px #ff00ff;
+            transform: scale(110%);
         }
+      }
+      
+    
+      input:focus {
+        outline: none;
+    }
+      .contact-form {
+        border-radius: 5px;
+        background-color: $primarycolour;
+        display: inline-flex;
+        width: 70%;
+        margin-bottom: 24px;
+      }
+      label{
+          font-size: 0.8rem;
+      }
+    
+        
+    
+    .blog-container{
+
+        @include blog-container();
+        border-radius: 20px;
+        border-color: $bannercolour;
+        border: 1px solid $bannercolour;
+        padding: 24px;
+        margin: 5%;
+        &:hover{
+            box-shadow: 2px 2px 16px #ff00ff;
+            transform: scale(102%);
+        }
+    
+        .blog-text{
+          display: inline-flex;
+          flex-direction: column;
+          
+        }
+        .blog-heading{
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0;
+        }
+        time{
+            font-size: 0.8rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+        a{
+            text-align: right;
+        }
+        p.blog-ul-main{
+            font-size: 0.4rem;
+        }
+        p.blog-li{
+            font-size: 0.7rem;
+        }
+        
+        .blog-button{
+            justify-content: flex-end;
+            width: auto;
+            border-radius: 10%;
+            margin-left: auto;
+            padding: 4px 8px 4px 8px;
+            background-color: $bannercolour;
+            font-size: 0.7rem;
+            &:hover{
+                background-color: black;
+                color: white;
+                box-shadow: 2px 2px 16px #ff00ff;
+                border: 1px solid $bannercolour;
+            }
+            
+        }
+    
+        //Using container to extend to tool-img on experience pages
+        .tool-img-container{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 5px 5px 5px 5px;
+            
+    
+            .tool-img{
+                width: 2.5rem;
+                
+            }
+        }
+
+}
+}
+
+
+
+// FOOTER ---------------------------------------------------------------------  
+
+#footer-bar {
+    height: auto;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $bannercolour;
+    display: flex;
+    justify-content: center;
+            
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+        li {
+            float: left;
+        }               
+            .social {
+                height: auto;
+                width: 30px;
+                color: black;
+                margin: 8px;         
+                &:hover{
+                    transform: scale(120%);
+                }
+            }              
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Small devices (landscape phones, less than 768px)
+@media only screen and (min-width: 576px) and (max-width: 768px) { 
+
+    .page-container{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+
+    .main-heading {
+            font-size: 1.7rem;
+            width: 50%;
+        }
+    .main-text{
+        font-size: 2rem;
+        }
+    .sub-heading {
+            font-size: 1.4rem;
+            text-align: center;
+        }
+    .par-text{
+            font-size: 1rem;
+            
+            
+            
+        }
+    ul{
+            font-size: 1.2rem;
+        }
+    .resume-icon{
+            width: 4rem;
+        }
+    p.learn-more{
+            font-size: 1rem;
+        }
+    .arrow-neon{
+            width: 60px;
+        }
+    .hello-pic{
+        max-width: 40%;
+    }
+    
+        
+
+        .blog-container{
+
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            width: 80%;
+            
+            .blog-heading{
+                font-size: 2rem;
+            }
+            time{
+                font-size: 0.8rem;
+            }
+            p.blog-li{
+                font-size: 0.8rem;
+            }
+            
+            .blog-button{
+                font-size: 1rem;
+                
+                
+            }
+    
+            .tool-img-container{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding: 5px 5px 5px 5px;
+                
+    
+            .tool-img{
+                    width: 2rem;
+                    
+                }
+    
+            }
+    
+            input[type=text], select, textarea {
+                width: 100%;
+                font-size: 1rem;
+            }
+            
+            input[type=submit] {
+                font-size: 1rem;
+                width: 60px;
+                height: auto; 
+            }
+            
+    
+            .contact-form {
+                width: 40%;
+            }
+    
+            label{
+                font-size: 1rem;
+            }
+    
+        }
+      
+    }    
+
+
+    #footer-bar {
+             
+        .social {
+            width: 30px;                   
+        }
+
+    }
+
+
+}
+
+
+//-----------------------------------
+
+
+
+// Medium devices (tablets, less than 992px)
+@media only screen and (min-width: 769px) and (max-width: 992px) { 
+
+header .nav-bar ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+
+    li{
+        font-size: 1.5rem;
+    }
+    .gradient-text{
+        font-size: 2rem;
+    }
+}
+
+.page-container{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+
+    .main-heading {
+        font-size: 1.8rem;
+        width: 40%;
+    }
+    .main-text{
+        width: 40%;
+        margin-top: 150px;
+        margin-bottom: 100px;
+    }
+    .sub-heading {
+        font-size: 1.2rem;
+    }
+    .par-text{
+        font-size: 1rem;
+    }
+    ul{
+        font-size: 1.3rem;
+    }
+    .resume-icon{
+        width: 6rem;
+    }
+    p.learn-more{
+        font-size: 1.3rem;
+    }
+    .arrow-neon{
+        width: 60px;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+    
+}    
+
+.wrap{
+  
+    .gradient-text{
+
+                 font-size: 15rem;
+                 margin:50px 0px 50px 0px;
+    }
+}
+
+#footer-bar {
+         
+    .social {
+        width: 40px;                   
+    }
+
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  input[type=submit] {
+    font-size: 1rem;
+    width: 80px;
+    height: auto; 
+  }
+ 
+
+  .contact-form {
+    width: 60%;
+  }
+  label{
+      font-size: 1rem;
+  }
+
+
+}
+
+.blog-container{
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 30%;
+    
+    .blog-heading{
+        font-size: 1.5rem;
+    }
+    time{
+        font-size: 0.8rem;
+    }
+    p.blog-li{
+        font-size: 0.8rem;
+    }
+    
+    .blog-button{
+        font-size: 1.2rem;
+        
         
     }
 
-    //Using container to extend to tool-img on experience pages
     .tool-img-container{
         display: flex;
         justify-content: space-between;
@@ -636,12 +699,278 @@ header{
         
 
         .tool-img{
-            width: 2.5rem;
+            width: 3.5rem;
             
         }
 
     }
 
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  input[type=submit] {
+    font-size: 1rem;
+    width: 80px;
+    height: auto; 
+  }
+ 
+
+  .contact-form {
+    width: 50%;
+  }
+  label{
+      font-size: 1rem;
+  }
+
+
+  // Large devices (desktops, less than 1200px)
+@media only screen and (min-width: 993px) and (max-width: 1900px) { 
+
+    header .nav-bar ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 50px;
+    
+        li{
+            font-size: 2rem;
+        }
+        .gradient-text{
+            font-size: 3rem;
+        }
+    }
+    
+    .page-container{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    
+        .main-heading {
+            font-size: 3.5rem;
+            width: 50%;
+        }
+        .main-text{
+            width: 60%;
+
+            p{
+                font-size: 1.5rem;
+            }
+        }
+        .sub-heading {
+            font-size: 3.5rem;
+            text-align: center;
+        }
+        .par-text{
+            font-size: 1.6rem;
+        }
+        ul{
+            font-size: 1.8rem;
+        }
+        .resume-icon{
+            width: 6rem;
+        }
+        p.learn-more{
+            font-size: 1.3rem;
+        }
+        .arrow-neon{
+            width: 60px;
+        }
+        p.par-text{
+            font-size: 2.5rem;
+            padding: 10%;
+        }
+        
+        
+    
+    .wrap{
+      
+        .gradient-text{
+    
+                     font-size: 25rem;
+                     margin:50px 0px 50px 0px;
+        }
+    
+        
+    }
+    
+    #footer-bar {
+             
+        .social {
+            width: 60px;                   
+        }
+    
+    }
+    
+    input[type=text], select, textarea {
+        width: 100%;
+        font-size: 1rem;
+      }
+      
+      input[type=submit] {
+        font-size: 1rem;
+        width: 80px;
+        height: auto; 
+      }
+     
+    
+      .contact-form {
+        width: 50%;
+      }
+      label{
+          font-size: 1rem;
+      }
+    
+    
+    
+    
+    .blog-container{
+    
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        width: 30%;
+        
+        .blog-heading{
+            font-size: 2.5rem;
+            margin-top: 20px;
+        }
+        time{
+            font-size: 2.5rem;
+            margin-top: 50px;
+        }
+        p.blog-li{
+            font-size: 1rem;
+        }
+
+        p.par-text{
+            font-size: 2rem;
+            padding: 0;
+        }
+        .blog-button{
+            font-size: 1.6rem;
+            
+            
+        }
+    
+        .tool-img-container{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 10px 10px 10px 10px;
+            
+    
+            .tool-img{
+                width: 8rem;
+                
+            }
+    
+        }
+        p{
+            font-size: 1.2rem;
+        }
+    
+    }
+    
+    input[type=text], select, textarea {
+        width: 100%;
+        font-size: 1rem;
+      }
+      
+      input[type=submit] {
+        font-size: 1rem;
+        width: 80px;
+        height: auto; 
+      }
+     
+    
+      .contact-form {
+        width: 30%;
+      }
+      label{
+          font-size: 1.5rem;
+      }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Large devices (desktops, less than 1200px)
+@media only screen and (min-width: 993px) and (max-width: 1900px) { 
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 320px) and (max-width: 1900px) and (orientation: landscape) {
+    nav.nav-bar ul{
+        flex-direction: row;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 
