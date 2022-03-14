@@ -705,93 +705,82 @@ div.logo .gradient-text:hover {
   .page-container p {
     font-size: 0.8rem;
   }
-  .wrap .gradient-text {
+  .page-container .wrap .gradient-text {
     font-size: 15rem;
     margin: 50px 0px 50px 0px;
   }
-  #footer-bar .social {
+  .page-container #footer-bar .social {
     width: 40px;
   }
-  input[type=text], select, textarea {
+  .page-container input[type=text], .page-container select, .page-container textarea {
     width: 100%;
     font-size: 1rem;
   }
-  input[type=submit] {
+  .page-container input[type=submit] {
     font-size: 1rem;
     width: 80px;
     height: auto;
   }
-  .contact-form {
+  .page-container .contact-form {
     width: 60%;
   }
-  label {
+  .page-container label {
     font-size: 1rem;
   }
-}
-
-.blog-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 30%;
-}
-
-.blog-container .blog-heading {
-  font-size: 1.5rem;
-}
-
-.blog-container time {
-  font-size: 0.8rem;
-}
-
-.blog-container p.blog-li {
-  font-size: 0.8rem;
-}
-
-.blog-container .blog-button {
-  font-size: 1.2rem;
-}
-
-.blog-container .tool-img-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 5px 5px 5px 5px;
-}
-
-.blog-container .tool-img-container .tool-img {
-  width: 3.5rem;
-}
-
-input[type=text], select, textarea {
-  width: 100%;
-  font-size: 1rem;
-}
-
-input[type=submit] {
-  font-size: 1rem;
-  width: 80px;
-  height: auto;
-}
-
-.contact-form {
-  width: 50%;
-}
-
-label {
-  font-size: 1rem;
+  .page-container .blog-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 30%;
+  }
+  .page-container .blog-container .blog-heading {
+    font-size: 1.5rem;
+  }
+  .page-container .blog-container time {
+    font-size: 0.8rem;
+  }
+  .page-container .blog-container p.blog-li {
+    font-size: 0.8rem;
+  }
+  .page-container .blog-container .blog-button {
+    font-size: 1.2rem;
+  }
+  .page-container .blog-container .tool-img-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 5px 5px 5px 5px;
+  }
+  .page-container .blog-container .tool-img-container .tool-img {
+    width: 3.5rem;
+  }
+  .page-container .blog-container input[type=text], .page-container .blog-container select, .page-container .blog-container textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .page-container .blog-container input[type=submit] {
+    font-size: 1rem;
+    width: 80px;
+    height: auto;
+  }
+  .page-container .blog-container .contact-form {
+    width: 50%;
+  }
+  .page-container .blog-container label {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (min-width: 993px) and (max-width: 1900px) {
@@ -885,7 +874,7 @@ label {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 30%;
+    width: 50%;
   }
   .page-container .blog-container .blog-heading {
     font-size: 2.5rem;

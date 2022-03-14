@@ -627,7 +627,7 @@ header .nav-bar ul{
         font-size: 0.8rem;
     }
     
-}    
+    
 
 .wrap{
   
@@ -666,7 +666,7 @@ input[type=text], select, textarea {
   }
 
 
-}
+
 
 .blog-container{
 
@@ -698,14 +698,14 @@ input[type=text], select, textarea {
         padding: 5px 5px 5px 5px;
         
 
-        .tool-img{
-            width: 3.5rem;
+    .tool-img{
+        width: 3.5rem;
             
         }
 
     }
 
-}
+
 
 input[type=text], select, textarea {
     width: 100%;
@@ -725,7 +725,9 @@ input[type=text], select, textarea {
   label{
       font-size: 1rem;
   }
-
+}
+}
+}
 
   // Large devices (desktops, less than 1200px)
 @media only screen and (min-width: 993px) and (max-width: 1900px) { 
@@ -832,7 +834,7 @@ input[type=text], select, textarea {
         display: flex;
         justify-content: flex-end;
         flex-direction: column;
-        width: 30%;
+        width: 50%;
         
         .blog-heading{
             font-size: 2.5rem;
