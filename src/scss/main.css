@@ -602,7 +602,7 @@ div.logo .gradient-text:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 80%;
+    width: 60%;
   }
   .page-container .blog-container .blog-heading {
     font-size: 2rem;
@@ -628,7 +628,7 @@ div.logo .gradient-text:hover {
     padding: 5px 5px 5px 5px;
   }
   .page-container .blog-container .tool-img-container .tool-img {
-    width: 2rem;
+    width: 4rem;
   }
   .page-container .blog-container input[type=text], .page-container .blog-container select, .page-container .blog-container textarea {
     width: 100%;

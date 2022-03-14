@@ -495,65 +495,65 @@ header{
     }
     
         
+    .blog-container{
 
-        .blog-container{
-
-            display: flex;
-            justify-content: flex-end;
-            flex-direction: column;
-            width: 80%;
-            
-            .blog-heading{
-                font-size: 2rem;
-            }
-            time{
-                font-size: 0.8rem;
-            }
-            p.blog-li{
-                font-size: 0.8rem;
-            }
-            
-            .blog-button{
-                font-size: 1rem;
-                
-                
-            }
-    
-            .tool-img-container{
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                padding: 5px 5px 5px 5px;
-                
-    
-            .tool-img{
-                    width: 2rem;
-                    
-                }
-    
-            }
-    
-            input[type=text], select, textarea {
-                width: 100%;
-                font-size: 1rem;
-            }
-            
-            input[type=submit] {
-                font-size: 1rem;
-                width: 60px;
-                height: auto; 
-            }
-            
-    
-            .contact-form {
-                width: 40%;
-            }
-    
-            label{
-                font-size: 1rem;
-            }
-    
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        width: 60%;
+        
+        .blog-heading{
+            font-size: 2rem;
         }
+        time{
+            font-size: 0.8rem;
+        }
+        p.blog-li{
+            font-size: 0.8rem;
+        }
+        
+        .blog-button{
+            font-size: 1rem;
+            
+            
+        }
+
+        .tool-img-container{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 5px 5px 5px 5px;
+            
+
+        .tool-img{
+                width: 4rem;
+                
+            }
+
+        }
+
+        input[type=text], select, textarea {
+            width: 100%;
+            font-size: 1rem;
+        }
+        
+        input[type=submit] {
+            font-size: 1rem;
+            width: 60px;
+            height: auto; 
+        }
+        
+
+        .contact-form {
+            width: 40%;
+        }
+
+        label{
+            font-size: 1rem;
+        }
+
+    }
+    
       
     }    
 
