@@ -431,6 +431,11 @@ div.logo .gradient-text:hover {
       align-content: center;
 }
 
+.page-container img.blog-img1 {
+  height: auto;
+  width: 100%;
+}
+
 .hello-pic {
   height: auto;
   max-width: 80%;
