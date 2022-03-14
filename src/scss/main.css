@@ -617,6 +617,14 @@ label {
   text-align: right;
 }
 
+.blog-container p.blog-ul-main {
+  font-size: 0.4rem;
+}
+
+.blog-container p.blog-li {
+  font-size: 0.7rem;
+}
+
 .blog-container .blog-button {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
