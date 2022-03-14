@@ -167,7 +167,7 @@ header a:hover {
   }
 }
 
-@media (orientation: landscape) {
+@media screen and (min-width: 320px) and (max-width: 1900px) and (orientation: landscape) {
   header nav.nav-bar ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
