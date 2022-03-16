@@ -251,7 +251,7 @@ header {
         margin: 5%;
         &:hover {
             box-shadow: 2px 2px 16px #ff00ff;
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .blog-text {
@@ -290,7 +290,7 @@ header {
             &:hover {
                 background-color: black;
                 color: white;
-                box-shadow: 2px 2px 16px #ff00ff;
+                box-shadow: 1px 1px 16px #ff00ff;
                 border: 1px solid $bannercolour;
             }
         }
@@ -325,6 +325,7 @@ div p.copyright{ // adding the copyright to the bottom of the page on index.html
     }
     p{
         font-size: 0.7rem;
+        text-decoration: none;
     }
 
 }
@@ -744,7 +745,7 @@ div p.copyright{ // adding the copyright to the bottom of the page on index.html
 
 //LANDSCAPE Q
 
-@media screen and (min-width: 320px) and (max-width: 575px) and (orientation: landscape) { // this is media q breakpoint once the user screen is rotated on mobile devices to increase viewport space.
+@media screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape) { // this is media q breakpoint once the user screen is rotated on mobile devices to increase viewport space.
     nav.nav-bar ul {
         flex-direction: row;
         margin-top: 10px;

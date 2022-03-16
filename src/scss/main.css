@@ -339,8 +339,8 @@ header .nav-bar .gradient-text {
 .page-container .blog-container:hover {
   -webkit-box-shadow: 2px 2px 16px #ff00ff;
           box-shadow: 2px 2px 16px #ff00ff;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .page-container .blog-container .blog-text {
@@ -393,8 +393,8 @@ header .nav-bar .gradient-text {
 .page-container .blog-container .blog-button:hover {
   background-color: black;
   color: white;
-  -webkit-box-shadow: 2px 2px 16px #ff00ff;
-          box-shadow: 2px 2px 16px #ff00ff;
+  -webkit-box-shadow: 1px 1px 16px #ff00ff;
+          box-shadow: 1px 1px 16px #ff00ff;
   border: 1px solid #66fcf1;
 }
 
@@ -449,6 +449,7 @@ div p.copyright {
 
 .contact-container p {
   font-size: 0.7rem;
+  text-decoration: none;
 }
 
 #footer-bar {
@@ -867,7 +868,7 @@ div p.copyright {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 575px) and (orientation: landscape) {
+@media screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape) {
   nav.nav-bar ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
