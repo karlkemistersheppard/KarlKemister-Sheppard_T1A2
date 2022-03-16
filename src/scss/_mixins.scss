@@ -1,37 +1,38 @@
+//MAIN CONTAINERS EXCLUDING THE MEDIA Q CHANGES
 
-// HEADER MIXINS (FLEX PROPERTIES)-------------------
+//Header
 
-// @mixin header-container(){
-//     display: flex;
-//     justify-content: center;
-//     flex-wrap: wrap;
-// }
+@mixin header(){
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+@mixin gradient-text(){
+    display:flex;
+    justify-content: center;
+}
 
 @mixin navbar-min-320-575(){
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-    
-    
 }
 
 @mixin navbar-min-576-768(){
     display: flex;
     justify-content: flex-end;
-    flex-direction: column;
-    
+    flex-direction: column;    
 }
 
-
-
-// PAGE CONTAINER (FLEX PROPERTIES)-------------------
+//Page Container
 
 @mixin page-container(){
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
-
 }
 
 @mixin blog-container(){
@@ -41,39 +42,29 @@
     width: 70%;
 }
 
-
-
-
-
-// CONTACT FORM (FLEX PROPERTIES)-------------------
-
-
-
-
-
-
-
-
-// FOOTER (FLEX PROPERTIES)-------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// MARGINS (FLEX PROPERTIES)-------------------
-
 @mixin page-margins(){
     margin-top: 64px;
-    margin-bottom: 100px;
+    margin-bottom: 100px; 
+}
+
+@mixin tool-img-container(){
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+//Blog
+
+@mixin blog-text(){
+    display: inline-flex;
+    flex-direction: column;
+}
+
+
+//Footer
+
+@mixin footer-container(){
+    display: flex;
+    justify-content: center;
     
 }
