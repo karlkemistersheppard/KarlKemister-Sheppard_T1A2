@@ -748,6 +748,7 @@ div p.copyright{ // adding the copyright to the bottom of the page on index.html
 
 @media (orientation: landscape) { // this is media q breakpoint once the user screen is rotated on mobile devices to increase viewport space.
     nav.nav-bar ul {
+        display: flex;
         flex-direction: row;
         margin-top: 10px;
         margin-bottom: 10px;
