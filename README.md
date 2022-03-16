@@ -25,7 +25,8 @@ Following a generalised structured layout similar to what you expect from most s
 @media only screen and (min-width: 320px) and (max-width: 575px)
 @media only screen and (min-width: 576px) and (max-width: 768px)
 @media only screen and (min-width: 769px) and (max-width: 992px)
-@media only screen and (min-width: 993px) and (max-width: 1900px)
+@media only screen and (min-width: 993px) and (max-width: 2500px)
+@media screen and (min-width: 320px) and (max-width: 575px) and (orientation: landscape)
 ```
 **Advanced SCSS** (Sassy) stylings, with the addition of @mixins, $variables to create dry code where possible.
 Functional Footer that contains links anchor href tags that have Psuedo:hover functions *(Allow user to directly email, call or connect to professional accounts eg Linkedin GitHub)*
@@ -35,6 +36,10 @@ Navigation bar text contains :hover function on hover and colour changing proper
 
 **Blog** containers have two-element features using box-shadow and colour changes with :hover effects.
 In addition, each blog container class has an additional button inside each that will be linked to individual HTML documents that are also styled within the current theme style, and within these blogs, pages will be an img for each blog.
+
+**External Pages** Website links to both Coder Academy Bootcamp info site if viewers are interested to learn more.  And an additional link to codecademy online learning profile for learning about additions focus learnings external to bootcamp.
+
+**Working Contact Submit Page** Website has a interactive contact page that directly links to thir party server that pushes the email to the address i have selected to they can get in contact via email.
 
 **Last** feature is the inclusion of the contact form which allows the user to simply fill in the required fields to send a direct email from the site to the owner of the website.
 
@@ -67,12 +72,13 @@ The Tech stack used to create this website is HTML, CSS, SCSS (SASSY), Pathshell
 
 # Reference:
 
-- How to create form and add honeypot + remove captcha. [ONLINE] Available at: https://www.youtube.com/watch?v=Yg6POD0M30w [Accessed 10th March 2022].
-- Adding rainbow gradient effects behind logo text to with :hover function. [ONLINE] Available at: https://codepen.io/bsander/pen/pPpbNm [Accessed 9th March 2022].
-- Remove underline text-decoration on the link for the logo. [ONLINE] Available at: https://blog.hubspot.com/website/remove-underline-from-links-css [Accessed 9th March 2022].
-- Media queries and suggested breakpoints for all devices [ONLINE] Available at: https://devfacts.com/media-queries-breakpoints-2021 [Accessed 8th March 2022].
-- Coder Academy, Website Reference (Subjects and Term Breakdown) [ONLINE] Available at: https://www.coderacademy.edu.au/web-development-bootcamp?hsLang=en-au [Accessed 13th March 2022].
-- Learning how to apply background-clip. [ONLINE] Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip [Accessed 8th March 2022].
-- Learning how to change the properties for a imput textarea field [ONLINE] Available at: https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select [Accessed at 8th March 2022].
-- Understanding outline effects for input fields [ONLINE] Available at: https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome [Accessed at 7th March 2022].
+- How to create form and add honeypot + remove captcha. [ONLINE] Available at: [https://www.youtube.com/watch?v=Yg6POD0M30w] [Accessed 10th March 2022].
+- Adding rainbow gradient effects behind logo text to with :hover function. [ONLINE] Available at: [https://codepen.io/bsander/pen/pPpbNm] [Accessed 9th March 2022].
+- Remove underline text-decoration on the link for the logo. [ONLINE] Available at: [https://blog.hubspot.com/website/remove-underline-from-links-css] [Accessed 9th March 2022].
+- Learning orientation for css media Q to apply change for small device [ONLINE] Available at: [https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation] [Accessed 9th March 2022].
+- Media queries and suggested breakpoints for all devices [ONLINE] Available at: [https://devfacts.com/media-queries-breakpoints-2021] [Accessed 8th March 2022].
+- Coder Academy, Website Reference (Subjects and Term Breakdown) [ONLINE] Available at: [https://www.coderacademy.edu.au/web-development-bootcamp?hsLang=en-au] [Accessed 13th March 2022].
+- Learning how to apply background-clip. [ONLINE] Available at: [https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip] [Accessed 8th March 2022].
+- Learning how to change the properties for a imput textarea field [ONLINE] Available at: [https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select] [Accessed at 8th March 2022].
+- Understanding outline effects for input fields [ONLINE] Available at: [https://stackoverflow.com/questions/3397113/how-to-remove-focus-border-outline-around-text-input-boxes-chrome] [Accessed at 7th March 2022].
 - 

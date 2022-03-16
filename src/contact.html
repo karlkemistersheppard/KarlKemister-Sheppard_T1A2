@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>KKS_Portfolio</title>
         <link rel="stylesheet" href="./scss/main.css"/> 
+        <link rel="icon" type="image/x-icon" href="./img/iconK.png"/>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
@@ -31,7 +32,7 @@
         
         <h1 class="main-text">Lests Get in Touch?</h1>
         <div class="contact-container">
-            <img class="contact" src="./img/email-white.png" alt="link to directly email site owner">
+            <img class="contact" src="./img/email-white.png" alt="link to directly email site owner"> <!-- added icon with alt text for user readability incase they dont read or see the icons in the footer -->
             <p>karlkemistersheppard@gmail.com</p>
         <img class="contact" src="./img/phone-white.png" alt="link to mobile auto call">
             <p>0413 431 813</p>
@@ -40,17 +41,17 @@
         <div class="contact-form">
 
             
-            <form action="https://formsubmit.co/a0142bdeb8c3bb7270f9320b6a5ebb61" method="POST">
+            <form action="https://formsubmit.co/a0142bdeb8c3bb7270f9320b6a5ebb61" method="POST"> <!-- string that hided my email address thanks to form submit.co -->
 
                 <!--Adding honeypot to remove the captcha popup when form is completed-->
                 <input type="text" name="_honey" style="display: none;">
 
-                <!--This is to disable the captcha-->
+                <!--This is to disable the captcha for UX will aim to add custom thank you for visiting page later down the track-->
                 <input type="hidden" name="_captcha" value="false">
 
         
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="first-name" placeholder="Your name.." required>
+                <label for="fname">First Name</label> <!-- creating the first label for the contact form -->
+                <input type="text" id="fname" name="first-name" placeholder="Your name.." required> <!-- creating the first input text field forthe contact page with the addition of required function to ensure the user completed all fields = placeholder text so they know what to enter -->
             
                 <label for="lname">Last Name</label>
                 <input type="text" id="lname" name="last-name" placeholder="Last name.." required>
@@ -67,7 +68,7 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" placeholder="Please add your message here.." style="height:200px" required></textarea>
             
-            <input class="blog-button" type="submit">
+            <input class="blog-button" type="submit"> <!-- adding basic input submit to the user can submit email to the owner of the site -->
             </form>
         </div>
            
