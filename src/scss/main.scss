@@ -1,30 +1,30 @@
-@import "variables";
-@import "mixins";
+@import "variables"; //adding pathshell to main.scss
+@import "mixins"; //adding mixins to main.scss
 
 html {
-    font-size: 16px;
+    font-size: 16px; //setting the base line font size to 16px so i can scale using rems
 }
 
 body {
-    background-color: $primarycolour;
-    color: white;
-    margin: 0;
-    font-family: $fontstyle;
-    margin-bottom: 64px;
+    background-color: $primarycolour; //setting background color
+    color: white; //setting basic font color
+    margin: 0; //making sure the html lines up to the page without defult margins
+    font-family: $fontstyle; //adding defined variable font style from imported font
+    margin-bottom: 64px; //adding defult 64px margin to the bottom of the html pages to give some space from from content to footer
 }
 
 //Header
 header {
-    @include header();
+    @include header(); //i have used mixins to define the display flex for main containers throughout the document
     background-color: $primarycolour;
 
     .nav-bar {
-        width: 100%;
+        width: 100%; //setting the margin width across the page for the header
         height: auto;
-        z-index: 1;
-        position: fixed;
+        z-index: 1; // used the z-index to create a top layer to ensure the header is always on top of the body elements
+        position: fixed; //fix the nav-bar to the top to make sure the user can always find a way home without scrolling
         background-color: $primarycolour;
-        top: 0;
+        top: 0; //sets the nav to absolute 0 top margin
 
         ul {
             padding-left: 0;
@@ -37,23 +37,23 @@ header {
             font-size: 1rem;
             font-family: $fontstyle;
             font-weight: normal;
-            text-align: center;
+            text-align: center; //align text to center of the container it sits in
         }
 
         a {
             padding: 0;
-            background-color: $primarycolour;
-            text-decoration: none;
-            color: $textcolour;
+            background-color: $primarycolour; // using the variable created to call the primary color incase i want to change the theme later
+            text-decoration: none; //removes any dots, dashes ect on the font
+            color: $textcolour; // useing the variable font color
             &:hover {
-                color: $hovercolour;
+                color: $hovercolour; // using the variable color created
                 background-color: $primarycolour;
-                font-size: 120%;
-                transition: 0.2s;
+                font-size: 120%; // increases font size on pseudo :hover when it is activated so user on desktop can see when hovered
+                transition: 0.2s; // this applies a transition timer for the :hover effect- allows 0.2 second time frame
             }
         }
         .gradient-text {
-            font-size: 1rem;
+            font-size: 1rem; // using rem allows for easier font size increase later when creating breakpoints for media q as it multiplies the existing preset font size created in the html tag 16px
         }
     }
 }
@@ -65,31 +65,31 @@ header {
     width: auto;
 }
 .gradient-text {
-    @include gradient-text();
+    @include gradient-text(); // flex properties applied in mixin created
     text-align: center;
     font-family: $fontstyle;
-    background: linear-gradient(to right, #66fcf1, #ff0490, #8f00f1, #39ff14);
-    background-size: 300% 300%;
-    animation: neon 2s ease-in-out infinite;
-    background-clip: text;
+    background: linear-gradient(to right, #66fcf1, #ff0490, #8f00f1, #39ff14); // this creates the gradient color range for the effects on the logo created
+    background-size: 300% 300%; // this applies the background linear above- it allows for the colors to be more wide spread giving a better blend
+    animation: neon 2s ease-in-out infinite; // this animation allows for a 2 sec timer from the first color to the last- then sets infinate loop
+    background-clip: text; // this allows you to set the was the element sits in the container/ box.  By setting it to text this allows the gradient to sit behind the white space in the text allowing it to show through.
     -webkit-background-clip: text;
-    color: rgba(0, 0, 0, 1);
-    font-size: 10rem;
+    color: rgba(0, 0, 0, 1); // sets the background color of the text before the :hover is activated
+    font-size: 10rem; // this multiplies the text 10x times 16px which was set in the html tag
     transition: color 0.4s ease-in-out;
-    text-shadow: 2px 2px 10px #66fcf22c;
-    margin: 0px 0px 0px 0px;
-    -webkit-text-stroke: 0.5px $bannercolour;
+    text-shadow: 2px 2px 10px #66fcf22c; // applies the text shadow to give the text the external glow
+    margin: 0px 0px 0px 0px; // setting the margin for the container at absolute 0 on all x/y axis
+    -webkit-text-stroke: 0.5px $bannercolour; // applies a outline on the text so you can see the left and right text font when not in :hover state
 
     .reverse-letter {
-        transform: rotateY(180deg);
-        color: #66fcf1;
+        transform: rotateY(180deg); // this reverses the middle letter so i can use text rather than img
+        color: $hovercolour;
     }
 }
 
 .gradient-text:hover {
     color: rgba(0, 0, 0, 0);
 }
-@keyframes neon {
+@keyframes neon { // this applies the direction to the gradients- when active the keyframe crease a back and forth motion giving a strobe effect
     0% {
         background-position: left;
     }
@@ -111,8 +111,8 @@ header {
 }
 
 .page-container {
-    @include page-container();
-    @include page-margins();
+    @include page-container(); // display flex properties applied here for main container
+    @include page-margins(); // preset mixins to main container
     width: 100%;
     height: auto;
     padding-top: 64px;
@@ -139,7 +139,7 @@ header {
     .par-text {
         font-size: 1rem;
         text-align: left;
-        font-family: $fontstyle-para;
+        font-family: $fontstyle-para; // second google font variable introduced here
         line-height: 140%;
     }
 
@@ -154,7 +154,7 @@ header {
         border-radius: 20%;
         width: 8rem;
         &:hover {
-            transform: scale(1.2);
+            transform: scale(1.2); // increased the size of the icon when hovered to show the user its interactive
         }
     }
     .codecademy-logo {
@@ -171,7 +171,7 @@ header {
     }
     .arrow-neon {
         width: 40px;
-        transform: rotate(180deg);
+        transform: rotate(180deg); // rotates the icon 180 deg, as the stock image was pointing in the opposite direction
         align-content: center;
     }
     img.blog-img1 {
@@ -186,11 +186,11 @@ header {
 
     input[type="text"],
     select,
-    textarea {
+    textarea { // this allows you to select the text area and modify the elements atributes inside the input field
         width: 100%;
         padding: 12px;
         border: 1px solid #ccc;
-        border-radius: 4px;
+        border-radius: 4px; // applies rounding to the text input so i smoothes the internal edges inside the field
         box-sizing: border-box;
         margin-top: 6px;
         margin-bottom: 16px;
@@ -199,19 +199,18 @@ header {
     }
 
     input[type="submit"] {
-        // justify-content: flex-end;
         width: 60px;
         height: 30px;
         border-radius: 10%;
         margin-left: auto;
-        padding: 4px 8px 4px 8px;
+        padding: 4px 8px 4px 8px; // applied padding to the submit button so its more user friendly
         background-color: $bannercolour;
         font-size: 0.7rem;
         &:hover {
             background-color: black;
             color: white;
             box-shadow: 2px 2px 16px #ff00ff;
-            border: 1px solid $bannercolour;
+            border: 1px solid $bannercolour; // applied a :hover state to the element to give the ueser some interaction effects
         }
     }
 
@@ -225,18 +224,18 @@ header {
         outline: none;
         &:hover {
             color: $hovercolour;
-            box-shadow: 4px 4px 24px #ff00ff;
+            box-shadow: 4px 4px 24px #ff00ff; // adds box shadow to the text area when :hover is active
         }
     }
 
     input:focus {
-        outline: none;
+        outline: none; // removes the line nested inside the input area- creates a clean visual finish
     }
     .contact-form {
         border-radius: 5px;
         background-color: $primarycolour;
-        display: inline-flex;
-        width: 70%;
+        display: inline-flex; // applies the content to inline row display
+        width: 70%; // changes the width of the contact form so it doesnt span across the whole page. using % allows the page to respond to display sizes auto
         margin-bottom: 24px;
     }
     label {
@@ -307,6 +306,30 @@ header {
     }
 }
 
+div p.copyright{ // adding the copyright to the bottom of the page on index.html
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.5rem;
+    color: rgb(137, 128, 128);
+}
+
+.contact-container{ // applied css properties to the mobile and email on the main contact page just incase the user doesnt use the direct link icons in the footer
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 30px 0px 30px 0px;
+    .contact{
+        width: 40px;
+    }
+    p{
+        font-size: 0.7rem;
+    }
+
+}
+
+
 #footer-bar {
     @include footer-container();
     height: auto;
@@ -317,26 +340,26 @@ header {
     background-color: $bannercolour;
 
     ul {
-        list-style-type: none;
-        padding: 0;
-        margin-top: 0;
-        margin-bottom: 0;
+        list-style-type: none; // removes the list ul styling so it has no dots applied on screen
+        padding: 0; // allows for absolute zero padding to tighten up space
+        margin-top: 0; // sets the top margin to zero in the footer container
+        margin-bottom: 0; // set the bottom margin to zero in the footer container
     }
     li {
-        float: left;
+        float: left; // floats the footer to absolute left so its left aligned to page at all times
     }
     .social {
         height: auto;
-        width: 30px;
+        width: 30px; // allows you to change the icon size which works great with using auto for the height
         color: black;
-        margin: 8px;
+        margin: 8px; // creates 8px margin around the entire icon
         &:hover {
-            transform: rotate(40deg);
+            transform: rotate(40deg); // rotates the icon on :hover effect 40 deg to the right for ux interactions 
         }
     }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 768px) {
+@media only screen and (min-width: 576px) and (max-width: 768px) { // this is media q breakpoint once the user screen min width reaches 576px and ranges to 768px
     .page-container {
         width: 100%;
         margin-left: 0;
@@ -433,10 +456,10 @@ header {
     }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 992px) {
+@media only screen and (min-width: 769px) and (max-width: 992px) { // this is media q breakpoint once the user screen min width reaches 769px and ranges to 992px
     header .nav-bar ul {
         display: flex;
-        flex-direction: row;
+        flex-direction: row; // this is the transition from column nav bar to flex direction row across the top of the page to create more viewpoint space for UX
         align-items: center;
         height: 50px;
 
@@ -571,7 +594,7 @@ header {
     }
 }
 
-@media only screen and (min-width: 993px) and (max-width: 1900px) {
+@media only screen and (min-width: 993px) and (max-width: 2500px) { // this is media q breakpoint once the user screen min width reaches 993px and ranges to 2500px
     header .nav-bar ul {
         display: flex;
         flex-direction: row;
@@ -579,10 +602,10 @@ header {
         height: 50px;
 
         li {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         .gradient-text {
-            font-size: 3rem;
+            font-size: 2rem;
         }
     }
 
@@ -592,7 +615,7 @@ header {
         margin-right: 0;
 
         .main-heading {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             width: 50%;
         }
         .main-text {
@@ -603,26 +626,26 @@ header {
             }
         }
         .sub-heading {
-            font-size: 3.5rem;
+            font-size: 1.5rem;
             text-align: center;
         }
         .par-text {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
         }
         ul {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
         }
         .resume-icon {
             width: 6rem;
         }
         p.learn-more {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
         .arrow-neon {
             width: 60px;
         }
         p.par-text {
-            font-size: 2.5rem;
+            font-size: 1.2rem;
             padding: 10%;
         }
 
@@ -655,22 +678,19 @@ header {
         .contact-form {
             width: 50%;
         }
-        label {
-            font-size: 1rem;
-        }
 
         .blog-container {
             display: flex;
             justify-content: flex-end;
             flex-direction: column;
-            width: 50%;
+            width: 30%;
 
             .blog-heading {
-                font-size: 2.5rem;
+                font-size: 2rem;
                 margin-top: 20px;
             }
             time {
-                font-size: 2.5rem;
+                font-size: 1.8rem;
                 margin-top: 50px;
             }
             p.blog-li {
@@ -678,7 +698,7 @@ header {
             }
 
             p.par-text {
-                font-size: 2rem;
+                font-size: 1.2rem;
                 padding: 0;
             }
             .blog-button {
@@ -692,7 +712,7 @@ header {
                 padding: 10px 10px 10px 10px;
 
                 .tool-img {
-                    width: 8rem;
+                    width: 4rem;
                 }
             }
             p {
@@ -717,14 +737,14 @@ header {
             width: 30%;
         }
         label {
-            font-size: 1.5rem;
+            font-size: 0.8rem;
         }
     }
 }
 
 //LANDSCAPE Q
 
-@media screen and (min-width: 320px) and (max-width: 1900px) and (orientation: landscape) {
+@media screen and (min-width: 320px) and (max-width: 575px) and (orientation: landscape) { // this is media q breakpoint once the user screen is rotated on mobile devices to increase viewport space.
     nav.nav-bar ul {
         flex-direction: row;
         margin-top: 10px;

@@ -414,6 +414,43 @@ header .nav-bar .gradient-text {
   width: 2.5rem;
 }
 
+div p.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 0.5rem;
+  color: #898080;
+}
+
+.contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  padding: 30px 0px 30px 0px;
+}
+
+.contact-container .contact {
+  width: 40px;
+}
+
+.contact-container p {
+  font-size: 0.7rem;
+}
+
 #footer-bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -685,7 +722,7 @@ header .nav-bar .gradient-text {
   }
 }
 
-@media only screen and (min-width: 993px) and (max-width: 1900px) {
+@media only screen and (min-width: 993px) and (max-width: 2500px) {
   header .nav-bar ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -700,10 +737,10 @@ header .nav-bar .gradient-text {
     height: 50px;
   }
   header .nav-bar ul li {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   header .nav-bar ul .gradient-text {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .page-container {
     width: 100%;
@@ -711,7 +748,7 @@ header .nav-bar .gradient-text {
     margin-right: 0;
   }
   .page-container .main-heading {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     width: 50%;
   }
   .page-container .main-text {
@@ -721,26 +758,26 @@ header .nav-bar .gradient-text {
     font-size: 1.5rem;
   }
   .page-container .sub-heading {
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     text-align: center;
   }
   .page-container .par-text {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   .page-container ul {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
   .page-container .resume-icon {
     width: 6rem;
   }
   .page-container p.learn-more {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .page-container .arrow-neon {
     width: 60px;
   }
   .page-container p.par-text {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
     padding: 10%;
   }
   .page-container .wrap .gradient-text {
@@ -764,9 +801,6 @@ header .nav-bar .gradient-text {
   .page-container .contact-form {
     width: 50%;
   }
-  .page-container label {
-    font-size: 1rem;
-  }
   .page-container .blog-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -778,21 +812,21 @@ header .nav-bar .gradient-text {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 50%;
+    width: 30%;
   }
   .page-container .blog-container .blog-heading {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: 20px;
   }
   .page-container .blog-container time {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     margin-top: 50px;
   }
   .page-container .blog-container p.blog-li {
     font-size: 1rem;
   }
   .page-container .blog-container p.par-text {
-    font-size: 2rem;
+    font-size: 1.2rem;
     padding: 0;
   }
   .page-container .blog-container .blog-button {
@@ -809,7 +843,7 @@ header .nav-bar .gradient-text {
     padding: 10px 10px 10px 10px;
   }
   .page-container .blog-container .tool-img-container .tool-img {
-    width: 8rem;
+    width: 4rem;
   }
   .page-container .blog-container p {
     font-size: 1.2rem;
@@ -829,11 +863,11 @@ header .nav-bar .gradient-text {
     width: 30%;
   }
   .page-container label {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 1900px) and (orientation: landscape) {
+@media screen and (min-width: 320px) and (max-width: 575px) and (orientation: landscape) {
   nav.nav-bar ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
