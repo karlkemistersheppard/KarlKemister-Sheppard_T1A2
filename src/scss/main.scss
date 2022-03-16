@@ -206,6 +206,7 @@ header {
         padding: 4px 8px 4px 8px; // applied padding to the submit button so its more user friendly
         background-color: $bannercolour;
         font-size: 0.7rem;
+        color: black;
         &:hover {
             background-color: black;
             color: white;
@@ -745,7 +746,7 @@ div p.copyright{ // adding the copyright to the bottom of the page on index.html
 
 //LANDSCAPE Q
 
-@media screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape) { // this is media q breakpoint once the user screen is rotated on mobile devices to increase viewport space.
+@media (orientation: landscape) { // this is media q breakpoint once the user screen is rotated on mobile devices to increase viewport space.
     nav.nav-bar ul {
         flex-direction: row;
         margin-top: 10px;
