@@ -45,7 +45,7 @@ header {
             background-color: $primarycolour; // using the variable created to call the primary color incase i want to change the theme later
             text-decoration: none; //removes any dots, dashes ect on the font
             color: $textcolour; // useing the variable font color
-            &:hover {
+            &:hover{
                 color: $hovercolour; // using the variable color created
                 background-color: $primarycolour;
                 font-size: 120%; // increases font size on pseudo :hover when it is activated so user on desktop can see when hovered
@@ -54,6 +54,9 @@ header {
         }
         .gradient-text {
             font-size: 1rem; // using rem allows for easier font size increase later when creating breakpoints for media q as it multiplies the existing preset font size created in the html tag 16px
+        }
+        .current{
+            color: $bannercolour;
         }
     }
 }
@@ -89,6 +92,7 @@ header {
 .gradient-text:hover {
     color: rgba(0, 0, 0, 0);
 }
+
 @keyframes neon { // this applies the direction to the gradients- when active the keyframe crease a back and forth motion giving a strobe effect
     0% {
         background-position: left;

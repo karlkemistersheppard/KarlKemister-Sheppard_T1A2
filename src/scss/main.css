@@ -66,6 +66,10 @@ header .nav-bar .gradient-text {
   font-size: 1rem;
 }
 
+header .nav-bar .current {
+  color: #66fcf1;
+}
+
 .wrap {
   height: 100%;
   width: auto;
