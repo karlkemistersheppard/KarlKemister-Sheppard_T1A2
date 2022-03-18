@@ -3,9 +3,9 @@
 
 
 # A link (URL) to your published portfolio website:
-[https://kks.netlify.app/index.html]
+[https://kks.netlify.app/]
 # A link to your GitHub repo
-[https://github.com/karlkemistersheppard/portfolio]
+[https://github.com/karlkemistersheppard/KarlKemister-Sheppard_T1A2]
 
 # Description of your portfolio website:
 
@@ -48,18 +48,18 @@ In addition, each blog container class has an additional button inside each that
 ![Sitemap](/src/img/Sitemap.png)
 
 ### <u>**Screenshots**</u>
-![Mobile First 320px home](./img/../src/img/Home_320px_Mobile.png)
-![Mobile First 320px about](./img/../src/img/About_320px_Mobile.png)
-![Mobile First 320px experience](./img/../src/img/Experience_320px_Mobile.png)
-![Mobile First 320px journey](./img/../src/img/Learning_320px_Mobile.png)
-![Mobile First 320px contact](./img/../src/img/Blog_320px_Mobile.png)
-![Mobile First 320px blog](./img/../src/img/Blog1_320px_Mobile.png)
-![Mobile First 320px home](./img/../src/img/Blog2_320px_Mobile.png)
-![Mobile First 320px about](./img/../src/img/Blog2_320px_Mobile.png)
-![Mobile First 320px experience](./img/../src/img/Blog3_320px_Mobile.png)
-![Mobile First 320px journey](./img/../src/img/Blog4_320px_Mobile.png)
-![Mobile First 320px contact](./img/../src/img/Blog5_320px_Mobile.png)
-![Mobile First 320px contact](./img/../src/img/Contact_320px_Mobile.png)
+![Mobile First 320px home](./img/../src/img/index.png)
+![Mobile First 320px about](./img/../src/img/About.png)
+![Mobile First 320px experience](./img/../src/img/Experience.png)
+![Mobile First 320px learning](./img/../src/img/Learning.png)
+![Mobile First 320px blog](./img/../src/img/Blog.png)
+![Mobile First 320px blog1](./img/../src/img/Blog1.png)
+![Mobile First 320px blog2](./img/../src/img/Blog2.png)
+![Mobile First 320px blog3](./img/../src/img/Blog3.png)
+![Mobile First 320px blog4](./img/../src/img/Blog4.png)
+![Mobile First 320px blog5](./img/../src/img/Blog5.png)
+![Mobile First 320px contact](./img/../src/img/Contact.png)
+
 
 
 
