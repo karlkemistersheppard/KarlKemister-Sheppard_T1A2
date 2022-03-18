@@ -26,7 +26,7 @@ Following a generalised structured layout similar to what you expect from most s
 @media only screen and (min-width: 576px) and (max-width: 768px)
 @media only screen and (min-width: 769px) and (max-width: 992px)
 @media only screen and (min-width: 993px) and (max-width: 2500px)
-@media screen and (min-width: 320px) and (max-width: 575px) and (orientation: landscape)
+@media (orientation: landscape)
 ```
 **Advanced SCSS** (Sassy) stylings, with the addition of @mixins, $variables to create dry code where possible.
 Functional Footer that contains links anchor href tags that have Psuedo:hover functions *(Allow user to directly email, call or connect to professional accounts eg Linkedin GitHub)*
